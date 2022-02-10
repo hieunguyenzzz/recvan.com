@@ -4,7 +4,8 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    namedGroups: ['a', 'b', 'c'],
     extend: {},
   },
-  plugins: [],
+  plugins: [require('daisyui'), require('./styles/plugins/nestedGroup')],
 }
