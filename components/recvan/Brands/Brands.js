@@ -26,9 +26,10 @@ export default function Brands({ items }) {
         </div>
 
         <div className="flex flex-col items-center lg:flex-1 lg:pt-[50vh]">
-          {items.map(({ href, title, src }) => {
+          {items.map(({ href, title, src }, i) => {
             return (
               <a
+                key={i}
                 href={href}
                 className="relative mb-4 border-2 border-transparent group hover:border-primary"
               >

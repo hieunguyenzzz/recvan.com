@@ -38,10 +38,11 @@ function Carousel({ items }) {
   return (
     <div className="w-full py-4 bg-base-200">
       <div className="container relative px-4 max-w-none bg-base-200">
-        <div ref={sliderWrapRef} class="carousel gap-4">
-          {items.map(({ caption, src, href, title }) => {
+        <div ref={sliderWrapRef} className="gap-4 carousel">
+          {items.map(({ caption, src, href, title }, i) => {
             return (
               <a
+                key={i}
                 href={href}
                 className="group-a carousel-item relative w-full  sm:w-[calc((100%-1em)/2)] md:w-[calc((100%-2em)/3)] lg:w-[calc((100%-3em)/4)] xl:w-[calc((100%-4em)/5)] 2xl:w-[calc((100%-5em)/6)]"
               >

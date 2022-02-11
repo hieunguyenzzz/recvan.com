@@ -1,7 +1,26 @@
 import componentRoutes from '@utils/componentRoutes'
-import React from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
+import VisibilitySensor from 'react-visibility-sensor'
 const componentList = componentRoutes
 export default function AllComponents() {
+  const [size, setSize] = useState()
+  let constraintsRef = useRef()
+  useLayoutEffect(() => {
+    let observer = new ResizeObserver(() => {
+      let width = constraintsRef.current.offsetWidth
+      let height = constraintsRef.current.offsetHeight
+      setSize({
+        width,
+        height,
+      })
+    })
+    setTimeout(() => {
+      observer.observe(constraintsRef.current)
+    }, 2000)
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
   return (
     <>
       <input
@@ -184,20 +203,50 @@ export default function AllComponents() {
               </div>
             </div>
           </div>
-          <div className=" relative h-[calc(100vh-72px)] overflow-auto">
-            {componentList.map(([id, Component, props]) => {
-              return (
-                <div
-                  key={id}
-                  id={id}
-                  className="absolute inset-0 hidden w-full min-h-full group target:block"
-                >
-                  <div className="hidden m-auto group-target:block">
-                    <Component {...props} />
+          <div className=" relative h-[calc(100vh-72px)] overflow-auto bg-base-100">
+            <div
+              style={
+                size && {
+                  width: size.width + 'px',
+                  height: size.height + 'px',
+                }
+              }
+              className="absolute w-full h-full"
+            >
+              <div className="absolute inset-0 bottom-0 right-0 top-6 left-6 ">
+                <div className="relative z-10 w-full h-full bg-base-200">
+                  <div className="relative w-full h-full">
+                    {componentList.map(([id, Component, props], i) => {
+                      return (
+                        <VisibilitySensor key={i}>
+                          {({ isVisible }) => (
+                            <div
+                              id={id}
+                              className="absolute top-0 left-0 hidden w-full h-full target:block"
+                            >
+                              {isVisible ? (
+                                <iframe
+                                  key={i}
+                                  src={'/components/' + id}
+                                  loading="lazy"
+                                  className="absolute top-0 left-0 w-full h-full "
+                                ></iframe>
+                              ) : (
+                                'invisible'
+                              )}
+                            </div>
+                          )}
+                        </VisibilitySensor>
+                      )
+                    })}
                   </div>
                 </div>
-              )
-            })}
+              </div>
+            </div>
+            <textarea
+              ref={constraintsRef}
+              className="absolute resize top-3 left-3 bottom-3 right-3 opacity-80"
+            />
           </div>
         </main>
         <div className="drawer-side">
@@ -224,9 +273,9 @@ export default function AllComponents() {
                 <li className="mt-4 menu-title">
                   <span>Docs</span>
                 </li>
-                {componentList.map(([id, Component]) => {
+                {componentList.map(([id, Component], i) => {
                   return (
-                    <li>
+                    <li key={i}>
                       <a href={'#' + id} className="capitalize">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
