@@ -1,59 +1,7 @@
+import componentRoutes from '@utils/componentRoutes'
 import React from 'react'
-import AdventurersWantedVideo from '../recvan/AdventurersWantedVideo'
-import AdventurersWantedVideoProps from '../recvan/AdventurersWantedVideo.props'
-import Brands from '../recvan/Brands'
-import BrandsProps from '../recvan/Brands.props'
-import Carousel from '../recvan/Carousel'
-import CarouselProps from '../recvan/Carousel.props'
-import Excellence from '../recvan/Excellence'
-import ExcellenceProps from '../recvan/Excellence.props'
-import Footer from '../recvan/Footer'
-import FooterProps from '../recvan/Footer.props'
-import FormEmailOffers from '../recvan/FormEmailOffers'
-import FormEmailOffersProps from '../recvan/FormEmailOffers.props'
-import FormMoreInfo from '../recvan/FormMoreInfo'
-import FormMoreInfoProps from '../recvan/FormMoreInfo.props'
-import FormSell from '../recvan/FormSell'
-import FormSellProps from '../recvan/FormSell.props'
-import HeroNav from '../recvan/HeroNav'
-import HeroNavProps from '../recvan/HeroNav.props'
-import History from '../recvan/History'
-import HistoryProps from '../recvan/History.props'
-import InventoryDetail from '../recvan/InventoryDetail'
-import InventoryDetailProps from '../recvan/InventoryDetail.props'
-import InventoryListing from '../recvan/InventoryListing'
-import InventoryListingProps from '../recvan/InventoryListing.props'
-import Location from '../recvan/Location'
-import LocationProps from '../recvan/Location.props'
-import PageContent from '../recvan/PageContent'
-import PageContentProps from '../recvan/PageContent.props'
-import RecvanBlog from '../recvan/RecvanBlog'
-import RecvanBlogProps from '../recvan/RecvanBlog.props'
-import SocialInstagram from '../recvan/SocialInstagram'
-import SocialInstagramProps from '../recvan/SocialInstagram.props'
-const componentList = [
-  [
-    'adventurers-wanted-video',
-    AdventurersWantedVideo,
-    AdventurersWantedVideoProps,
-  ],
-  ['hero-nav', HeroNav, HeroNavProps],
-  ['brands', Brands, BrandsProps],
-  ['history', History, HistoryProps],
-  ['carousel', Carousel, CarouselProps],
-  ['inventory-detail', InventoryDetail, InventoryDetailProps],
-  ['excellence', Excellence, ExcellenceProps],
-  ['inventory-listing', InventoryListing, InventoryListingProps],
-  ['footer', Footer, FooterProps],
-  ['location', Location, LocationProps],
-  ['form-email-offers', FormEmailOffers, FormEmailOffersProps],
-  ['page-content', PageContent, PageContentProps],
-  ['form-more-info', FormMoreInfo, FormMoreInfoProps],
-  ['recvan-blog', RecvanBlog, RecvanBlogProps],
-  ['form-sell', FormSell, FormSellProps],
-  ['social-instagram', SocialInstagram, SocialInstagramProps],
-]
-export default function Layout() {
+const componentList = componentRoutes
+export default function AllComponents() {
   return (
     <>
       <input

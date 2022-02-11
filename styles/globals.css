@@ -1,9 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  h1,
+  h2 {
+    @apply tracking-widest font-heading;
+  }
+}
+/* Good Times */
+@font-face {
+  font-family: 'good_times_rg';
+  src: url('../assets/fonts/good_times_rg-webfont.woff2') format('woff2'),
+    url('../assets/fonts/good_times_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Gunplay */
+/* @font-face {
+  font-family: 'gunplay_rg';
+  src: url('../assets/gunplay/gunplay_rg-webfont.woff2') format('woff2'),
+    url('../assets/gunplay/gunplay_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* Sofia Pro Soft Medium */
+@font-face {
+  font-family: 'sofia_pro_soft_md';
+  src: url('../assets/fonts/SofiaProSoftMed.woff2') format('woff2'),
+    url('../assets/fonts/SofiaProSoftMed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* theme */
 [data-theme='recvan']:checked ~ div {
-  --p: 259 94% 61%;
-  --pf: 259 94.4% 51.2%;
+  --p: 37 30% 50%;
+  --pf: 38 31% 35%;
   --pc: 0 0% 100%;
   --s: 314 100% 47.1%;
   --sf: 314 100% 37.1%;
@@ -15,7 +49,7 @@
   --nf: 223 13.7% 10%;
   --nc: 0 0% 100%;
   --b1: 219 14.1% 27.8%;
-  --b2: 222 13.4% 19%;
+  --b2: 0 0% 15%;
   --b3: 223 13.7% 10%;
   --bc: 228 14.3% 93.1%;
   --in: 202 100% 70%;
@@ -24,7 +58,7 @@
   --er: 0 100% 71.8%;
   --border-color: var(--b3);
   --rounded-box: 1rem;
-  --rounded-btn: 0.5rem;
+  --rounded-btn: 0rem;
   --rounded-badge: 1.9rem;
   --animation-btn: 0.25s;
   --animation-input: 0.2s;
@@ -174,6 +208,9 @@
 }
 :root {
   --header-height: 70px;
+}
+body {
+  @apply font-body;
 }
 @screen lg {
   :root {

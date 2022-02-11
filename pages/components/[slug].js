@@ -2,7 +2,20 @@ import componentRoutes from '../../utils/componentRoutes'
 
 export default function Pages({ slug, ...props }) {
   const Component = componentRoutes.find(([key]) => slug === key)[1]
-  return <Component {...props}></Component>
+  return (
+    <>
+      <input
+        hidden
+        defaultChecked
+        id="data-theme-recvan"
+        data-theme="recvan"
+        name="theme"
+        type="radio"
+        defaultValue="recvan"
+      />
+      <Component {...props}></Component>
+    </>
+  )
 }
 
 export async function getStaticProps(context) {
