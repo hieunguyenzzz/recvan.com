@@ -14,9 +14,7 @@ export default function AllComponents() {
         height,
       })
     })
-    setTimeout(() => {
-      observer.observe(constraintsRef.current)
-    }, 2000)
+    observer.observe(constraintsRef.current)
     return () => {
       observer.disconnect()
     }

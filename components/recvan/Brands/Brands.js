@@ -14,7 +14,7 @@ export default function Brands({ items }) {
       className="min-h-screen bg-white"
     >
       <div className="flex flex-col gap-24 lg:flex-row lg:gap-0">
-        <div className="sticky top-0 isolate z-10 flex max-h-screen min-h-screen w-full items-start pt-[var(--header-height)] lg:flex-1 lg:items-center lg:pt-0">
+        <div className="pointer-events-none sticky top-0 isolate z-10 flex max-h-screen min-h-screen w-full items-start pt-[var(--header-height)] lg:flex-1 lg:items-center lg:pt-0">
           <div className="flex flex-col w-full gap-3 px-3 py-3 text-center bg-base-200 lg:text-right">
             <h2 className="text-2xl font-bold uppercase leading-[0.8]">
               Brands You
@@ -38,9 +38,9 @@ export default function Brands({ items }) {
                   src={src}
                   alt={title}
                 />
-                <div className="btn btn-primary absolute -bottom-4 left-1/2 w-[240px] -translate-x-1/2 uppercase opacity-0 group-hover:opacity-100">
+                <button className="no-animation absolute -bottom-4 left-1/2 flex h-12 w-[240px] -translate-x-1/2 items-center justify-center bg-primary uppercase opacity-0 focus:bg-primary-focus group-hover:opacity-100">
                   shop brand
-                </div>
+                </button>
               </a>
             )
           })}
