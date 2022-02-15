@@ -30,15 +30,16 @@ import RecvanBlogProps from '@components/recvan/RecvanBlog.props'
 import SocialInstagram from '@components/recvan/SocialInstagram'
 import SocialInstagramProps from '@components/recvan/SocialInstagram.props'
 const componentRoutes = [
+  ['hero-nav', HeroNav, HeroNavProps],
+  ['carousel', Carousel, CarouselProps],
+  ['brands', Brands, BrandsProps],
   [
     'adventurers-wanted-video',
     AdventurersWantedVideo,
     AdventurersWantedVideoProps,
   ],
-  ['hero-nav', HeroNav, HeroNavProps],
-  ['brands', Brands, BrandsProps],
   ['history', History, HistoryProps],
-  ['carousel', Carousel, CarouselProps],
+
   ['inventory-detail', InventoryDetail, InventoryDetailProps],
   ['excellence', Excellence, ExcellenceProps],
   ['inventory-listing', InventoryListing, InventoryListingProps],

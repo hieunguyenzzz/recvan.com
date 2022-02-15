@@ -7,6 +7,9 @@ export default function AdventurersWantedVideo() {
     let lastKnownScrollPosition = 0
     let ticking = false
     function calcPercent() {
+      if (trackerRef.current.getBoundingClientRect().top > 0) {
+        return setPercent(0)
+      }
       const top = Math.abs(trackerRef.current.getBoundingClientRect().top)
       const max = Math.abs(
         trackerRef.current.getBoundingClientRect().height - window.innerHeight
@@ -30,7 +33,7 @@ export default function AdventurersWantedVideo() {
   }, [])
   return (
     <div ref={trackerRef} className="w-full ">
-      <div className="sticky top-0 isolate w-full bg-[#585731]">
+      <div className="sticky top-header isolate w-full bg-[#585731]">
         <div className="absolute left-0 top-1/2 z-[-1] flex w-full -translate-y-1/2 justify-center text-center">
           <div className="p-4 mx-auto bg-base-200">
             <h2 class="text-[4vw] font-bold leading-[4.2vw] tracking-widest">

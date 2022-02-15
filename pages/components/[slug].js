@@ -13,7 +13,9 @@ export default function Pages({ slug, ...props }) {
         type="radio"
         defaultValue="recvan"
       />
-      <Component {...props}></Component>
+      <div className="h-[300vh]">
+        <Component {...props}></Component>
+      </div>
     </>
   )
 }

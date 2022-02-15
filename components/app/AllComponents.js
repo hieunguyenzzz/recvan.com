@@ -212,7 +212,7 @@ export default function AllComponents() {
               className="absolute w-full h-full"
             >
               <div className="absolute inset-0 bottom-0 right-0 top-6 left-6 ">
-                <div className="relative z-10 w-full h-full bg-base-200">
+                <div className="relative z-10 w-full h-full bg-base-100">
                   <div className="relative w-full h-full">
                     {componentList.map(([id, Component, props], i) => {
                       return (
@@ -230,13 +230,31 @@ export default function AllComponents() {
                                   className="absolute top-0 left-0 w-full h-full "
                                 ></iframe>
                               ) : (
-                                'invisible'
+                                ''
                               )}
                             </div>
                           )}
                         </VisibilitySensor>
                       )
                     })}
+                    <VisibilitySensor>
+                      {({ isVisible }) => (
+                        <div
+                          id={'combine'}
+                          className="absolute top-0 left-0 hidden w-full h-full target:block"
+                        >
+                          {isVisible ? (
+                            <iframe
+                              src={'/components/combine'}
+                              loading="lazy"
+                              className="absolute top-0 left-0 w-full h-full "
+                            ></iframe>
+                          ) : (
+                            ''
+                          )}
+                        </div>
+                      )}
+                    </VisibilitySensor>
                   </div>
                 </div>
               </div>
@@ -250,7 +268,7 @@ export default function AllComponents() {
         <div className="drawer-side">
           <label htmlFor="main-menu" className="drawer-overlay" />
           <aside className="flex flex-col justify-start border-r w-80 border-base-200 bg-base-100 text-base-content">
-            <div className="sticky inset-x-0 top-0 z-50 hidden w-full py-1 transition duration-200 ease-in-out border-b border-base-200 bg-base-100 lg:block">
+            <div className="sticky inset-x-0 top-0 z-50 hidden w-full transition duration-200 ease-in-out border-b border-base-200 bg-base-100 lg:block">
               <div className="mx-auto space-x-1 navbar max-w-none">
                 <div className="flex items-center flex-none">
                   <a
@@ -269,7 +287,7 @@ export default function AllComponents() {
             <div>
               <ul className="flex flex-col p-4 pt-2 compact menu">
                 <li className="mt-4 menu-title">
-                  <span>Docs</span>
+                  <span>Components</span>
                 </li>
                 {componentList.map(([id, Component], i) => {
                   return (
@@ -293,6 +311,27 @@ export default function AllComponents() {
                     </li>
                   )
                 })}
+                <li className="mt-4 menu-title">
+                  <span>Combine</span>
+                  <li>
+                    <a href={'#combine'} className="capitalize">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        className="inline-block w-6 h-6 mr-2 stroke-current"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
+                      </svg>
+                      Combine 1
+                    </a>
+                  </li>
+                </li>
               </ul>
             </div>
           </aside>

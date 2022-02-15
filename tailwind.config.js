@@ -4,8 +4,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+    },
     namedGroups: ['a', 'b', 'c'],
     extend: {
+      spacing: {
+        header: 'var(--header-height)',
+        'container-offset': '1rem',
+      },
       fontFamily: {
         body: [
           'sofia_pro_soft_md',
