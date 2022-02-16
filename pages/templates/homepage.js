@@ -1,6 +1,6 @@
 import componentRoutes from '../../utils/componentRoutes'
 
-export default function Pages({ slug, ...props }) {
+export default function Homepage({ slug, ...props }) {
   return (
     <>
       <input

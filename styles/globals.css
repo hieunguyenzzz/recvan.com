@@ -39,8 +39,8 @@
   --p: 37 30% 50%;
   --pf: 38 31% 35%;
   --pc: 0 0% 100%;
-  --s: 314 100% 47.1%;
-  --sf: 314 100% 37.1%;
+  --s: 58 28% 27.1%;
+  --sf: 58 27% 38.1%;
   --sc: 0 0% 100%;
   --a: 174 60% 51%;
   --af: 174 59.8% 41%;
@@ -208,9 +208,13 @@
 }
 :root {
   --header-height: 70px;
+  --bootom-offset: 100px;
 }
 body {
-  @apply font-body;
+  @apply bg-[#f3f2ef] font-body;
+}
+[data-theme]:checked ~ * {
+  @apply bg-[#f3f2ef] font-body;
 }
 @screen lg {
   :root {

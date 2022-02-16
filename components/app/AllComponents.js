@@ -1,11 +1,11 @@
 import componentRoutes from '@utils/componentRoutes'
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 const componentList = componentRoutes
 export default function AllComponents() {
   const [size, setSize] = useState()
   let constraintsRef = useRef()
-  useLayoutEffect(() => {
+  useEffect(() => {
     let observer = new ResizeObserver(() => {
       let width = constraintsRef.current.offsetWidth
       let height = constraintsRef.current.offsetHeight
@@ -64,7 +64,7 @@ export default function AllComponents() {
       />
       <div className="drawer-mobile drawer ">
         <input id="main-menu" type="checkbox" className="drawer-toggle" />
-        <main className="drawer-content block h-screen flex-grow !overflow-hidden bg-base-100 text-base-content">
+        <main className="btext-base-content drawer-content block h-screen flex-grow !overflow-hidden ">
           <div
             id="nav"
             className="sticky inset-x-0 top-0 z-50 w-full transition duration-200 ease-in-out border-b border-base-200 bg-base-100 text-base-content"

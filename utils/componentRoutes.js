@@ -32,24 +32,23 @@ import SocialInstagramProps from '@components/recvan/SocialInstagram.props'
 const componentRoutes = [
   ['hero-nav', HeroNav, HeroNavProps],
   ['carousel', Carousel, CarouselProps],
-  ['brands', Brands, BrandsProps],
+  ['excellence', Excellence, ExcellenceProps],
   [
     'adventurers-wanted-video',
     AdventurersWantedVideo,
     AdventurersWantedVideoProps,
   ],
+  ['brands', Brands, BrandsProps],
   ['history', History, HistoryProps],
-
-  ['inventory-detail', InventoryDetail, InventoryDetailProps],
-  ['excellence', Excellence, ExcellenceProps],
-  ['inventory-listing', InventoryListing, InventoryListingProps],
+  ['social-instagram', SocialInstagram, SocialInstagramProps],
+  ['recvan-blog', RecvanBlog, RecvanBlogProps],
   ['footer', Footer, FooterProps],
+  ['inventory-detail', InventoryDetail, InventoryDetailProps],
+  ['inventory-listing', InventoryListing, InventoryListingProps],
   ['location', Location, LocationProps],
   ['form-email-offers', FormEmailOffers, FormEmailOffersProps],
   ['page-content', PageContent, PageContentProps],
   ['form-more-info', FormMoreInfo, FormMoreInfoProps],
-  ['recvan-blog', RecvanBlog, RecvanBlogProps],
   ['form-sell', FormSell, FormSellProps],
-  ['social-instagram', SocialInstagram, SocialInstagramProps],
 ]
 export default componentRoutes

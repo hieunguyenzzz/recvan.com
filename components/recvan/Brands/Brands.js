@@ -11,7 +11,7 @@ export default function Brands({ items }) {
         width: '100%',
         backgroundRepeat: 'no-repeat',
       }}
-      className="min-h-screen bg-white"
+      className="min-h-screen "
     >
       <div className="flex flex-col gap-24 lg:flex-row lg:gap-0">
         <div className="pointer-events-none sticky top-0 isolate z-10 flex max-h-screen min-h-screen w-full items-start pt-[var(--header-height)] lg:flex-1 lg:items-center lg:pt-0">

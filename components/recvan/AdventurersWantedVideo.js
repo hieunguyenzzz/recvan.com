@@ -33,7 +33,7 @@ export default function AdventurersWantedVideo() {
   }, [])
   return (
     <div ref={trackerRef} className="w-full ">
-      <div className="sticky top-header isolate w-full bg-[#585731]">
+      <div className="sticky top-0 isolate flex h-screen w-full items-center bg-[#585731]">
         <div className="absolute left-0 top-1/2 z-[-1] flex w-full -translate-y-1/2 justify-center text-center">
           <div className="p-4 mx-auto bg-base-200">
             <h2 class="text-[4vw] font-bold leading-[4.2vw] tracking-widest">
