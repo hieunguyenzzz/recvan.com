@@ -51,4 +51,33 @@ const componentRoutes = [
   ['form-more-info', FormMoreInfo, FormMoreInfoProps],
   ['form-sell', FormSell, FormSellProps],
 ]
+export const templateRoutes = [
+  [
+    'homepage',
+    [
+      ['hero-nav', HeroNav, HeroNavProps],
+      ['carousel', Carousel, CarouselProps],
+      ['excellence', Excellence, ExcellenceProps],
+      [
+        'adventurers-wanted-video',
+        AdventurersWantedVideo,
+        AdventurersWantedVideoProps,
+      ],
+      ['brands', Brands, BrandsProps],
+      ['history', History, HistoryProps],
+      ['social-instagram', SocialInstagram, SocialInstagramProps],
+      ['recvan-blog', RecvanBlog, RecvanBlogProps],
+      ['footer', Footer, FooterProps],
+    ],
+  ],
+  [
+    'localtion',
+    [
+      ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
+      ['location', Location, LocationProps],
+      ['footer', Footer, FooterProps],
+    ],
+  ],
+]
+
 export default componentRoutes

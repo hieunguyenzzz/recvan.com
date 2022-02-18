@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Logo from './common/Logo'
-const Header = ({ navItems }) => {
+const Header = ({ navItems, transparent }) => {
   const trackerRef = useRef()
   const [show, setShow] = useState(false)
   useEffect(() => {
+    if (!transparent) {
+      setShow(true)
+      return
+    }
     let lastKnownScrollPosition = 0
     let ticking = false
     function calc() {
@@ -25,7 +29,7 @@ const Header = ({ navItems }) => {
     return () => {
       window.removeEventListener('scroll', windowScrollHandler)
     }
-  }, [])
+  }, [transparent])
   return (
     <header
       ref={trackerRef}
@@ -302,11 +306,11 @@ const Hero = () => {
     </div>
   )
 }
-export default function HeroNav({ navItems }) {
+export default function HeroNav({ navItems, children, transparent }) {
   return (
     <>
-      <Header navItems={navItems} />
-      <Hero />
+      <Header navItems={navItems} transparent={transparent} />
+      {transparent ? <Hero /> : <div className="h-header" />}
     </>
   )
 }

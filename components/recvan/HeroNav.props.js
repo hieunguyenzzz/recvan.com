@@ -1,4 +1,5 @@
 export default {
+  transparent: true,
   navItems: [
     {
       active: true,

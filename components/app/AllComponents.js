@@ -1,4 +1,4 @@
-import componentRoutes from '@utils/componentRoutes'
+import componentRoutes, { templateRoutes } from '@utils/componentRoutes'
 import React, { useEffect, useRef, useState } from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 const componentList = componentRoutes
@@ -211,7 +211,7 @@ export default function AllComponents() {
               }
               className="absolute w-full h-full"
             >
-              <div className="absolute inset-0 bottom-0 right-0 top-6 left-6 ">
+              <div className="absolute inset-0 bottom-0 right-0 top-8 left-8 ">
                 <div className="relative z-10 w-full h-full bg-base-100">
                   <div className="relative w-full h-full">
                     {componentList.map(([id, Component, props], i) => {
@@ -237,31 +237,58 @@ export default function AllComponents() {
                         </VisibilitySensor>
                       )
                     })}
-                    <VisibilitySensor>
-                      {({ isVisible }) => (
-                        <div
-                          id={'combine'}
-                          className="absolute top-0 left-0 hidden w-full h-full target:block"
-                        >
-                          {isVisible ? (
-                            <iframe
-                              src={'/components/combine'}
-                              loading="lazy"
-                              className="absolute top-0 left-0 w-full h-full "
-                            ></iframe>
-                          ) : (
-                            ''
+                    {templateRoutes.map(([id, Component, props], i) => {
+                      return (
+                        <VisibilitySensor key={'templateRoutes-' + i}>
+                          {({ isVisible }) => (
+                            <div
+                              id={id}
+                              className="absolute top-0 left-0 hidden w-full h-full target:block"
+                            >
+                              {isVisible ? (
+                                <iframe
+                                  key={i}
+                                  src={'/templates/' + id}
+                                  loading="lazy"
+                                  className="absolute top-0 left-0 w-full h-full "
+                                ></iframe>
+                              ) : (
+                                ''
+                              )}
+                            </div>
                           )}
-                        </div>
-                      )}
-                    </VisibilitySensor>
+                        </VisibilitySensor>
+                      )
+                    })}
                   </div>
                 </div>
+              </div>
+              <div className="absolute z-20 text-xl pointer-events-none icon h2 -bottom-4 -right-4">
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 5C11 3.89543 10.1046 3 9 3H5C3.89543 3 3 3.89543 3 5V9C3 10.1046 3.89543 11 5 11H9C10.1046 11 11 10.1046 11 9V5ZM9 5H5V9H9V5Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M19 13H21V21H13V19H17.5858L12.2218 13.6361C11.8313 13.2456 11.8313 12.6124 12.2218 12.2219C12.6124 11.8314 13.2455 11.8314 13.6361 12.2219L19 17.5858V13Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
               </div>
             </div>
             <textarea
               ref={constraintsRef}
-              className="absolute resize top-3 left-3 bottom-3 right-3 opacity-80"
+              className="absolute opacity-0 resize top-4 left-4 bottom-4 right-4 opacity-80"
             />
           </div>
         </main>
@@ -289,9 +316,9 @@ export default function AllComponents() {
                 <li className="mt-4 menu-title">
                   <span>Components</span>
                 </li>
-                {componentList.map(([id, Component], i) => {
+                {componentList.map(([id], i) => {
                   return (
-                    <li key={i}>
+                    <li key={'Components-' + i}>
                       <a href={'#' + id} className="capitalize">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -312,26 +339,30 @@ export default function AllComponents() {
                   )
                 })}
                 <li className="mt-4 menu-title">
-                  <span>Combine</span>
-                  <li>
-                    <a href={'#combine'} className="capitalize">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        className="inline-block w-6 h-6 mr-2 stroke-current"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                      Combine 1
-                    </a>
-                  </li>
+                  <span>Templates</span>
                 </li>
+                {templateRoutes.map(([id], i) => {
+                  return (
+                    <li key={'Templates-' + i}>
+                      <a href={'#' + id} className="capitalize">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          className="inline-block w-6 h-6 mr-2 stroke-current"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                          />
+                        </svg>
+                        {id}
+                      </a>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           </aside>

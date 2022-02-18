@@ -1,6 +1,7 @@
-import componentRoutes from '../../utils/componentRoutes'
+import { templateRoutes } from '../../utils/componentRoutes'
 
 export default function Pages({ slug, ...props }) {
+  const componentRoutes = templateRoutes.find(([key]) => slug === key)[1]
   return (
     <>
       <input
@@ -12,7 +13,7 @@ export default function Pages({ slug, ...props }) {
         type="radio"
         defaultValue="recvan"
       />
-      <div>
+      <div className="flex flex-col justify-between min-h-screen bg-base-300">
         {componentRoutes.map(([key, Component, props]) => {
           return <Component key={key} {...props} />
         })}
@@ -22,7 +23,21 @@ export default function Pages({ slug, ...props }) {
 }
 
 export async function getStaticProps(context) {
+  const slug = context.params.slug
   return {
-    props: {},
+    props: {
+      slug: slug,
+    },
+  }
+}
+
+export async function getStaticPaths() {
+  let paths = []
+  templateRoutes.forEach(([slug]) => {
+    paths.push('/templates/' + slug)
+  })
+  return {
+    paths,
+    fallback: false,
   }
 }

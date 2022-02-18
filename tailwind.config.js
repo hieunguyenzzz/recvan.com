@@ -8,7 +8,7 @@ module.exports = {
       center: true,
       padding: '1rem',
     },
-    namedGroups: ['a', 'b', 'c'],
+    namedGroups: ['a', 'b', 'c', 'd'],
     extend: {
       spacing: {
         header: 'var(--header-height)',
@@ -30,5 +30,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require('daisyui'), require('./styles/plugins/nestedGroup')],
+  plugins: [
+    require('daisyui'),
+    require('./styles/plugins/nestedGroup'),
+    require('@tailwindcss/typography'),
+  ],
 }

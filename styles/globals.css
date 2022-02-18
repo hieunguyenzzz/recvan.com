@@ -50,7 +50,7 @@
   --nc: 0 0% 100%;
   --b1: 219 14.1% 27.8%;
   --b2: 0 0% 15%;
-  --b3: 223 13.7% 10%;
+  --b3: 45 14% 95%;
   --bc: 43 16% 71%;
   --in: 202 100% 70%;
   --su: 89 61.6% 52%;
@@ -208,13 +208,19 @@
 }
 :root {
   --header-height: 70px;
-  --bootom-offset: 100px;
+  --bottom-offset: 100px;
 }
 body {
-  @apply bg-[#f3f2ef] font-body;
+  @apply bg-[#f3f2ef] font-body text-base-content text-opacity-[0.54];
 }
 [data-theme]:checked ~ * {
-  @apply bg-[#f3f2ef] font-body;
+  @apply bg-base-300 font-body text-base-100 text-opacity-[0.54];
+}
+@screen md {
+  :root {
+    --header-height: 100px;
+    --bottom-offset: 0;
+  }
 }
 @screen lg {
   :root {
