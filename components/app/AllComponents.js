@@ -212,7 +212,7 @@ export default function AllComponents() {
               className="absolute w-full h-full"
             >
               <div className="absolute inset-0 bottom-0 right-0 top-8 left-8 ">
-                <div className="relative z-10 w-full h-full bg-base-300">
+                <div className="relative z-10 w-full h-full bg-base-200">
                   <div className="relative w-full h-full">
                     {componentList.map(([id], i) => {
                       return (
@@ -288,7 +288,7 @@ export default function AllComponents() {
             </div>
             <textarea
               ref={constraintsRef}
-              className="absolute opacity-0 resize top-4 left-4 bottom-4 right-4"
+              className="absolute resize top-4 left-4 bottom-4 right-4"
             />
           </div>
         </main>

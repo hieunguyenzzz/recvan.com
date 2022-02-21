@@ -4,19 +4,19 @@ export default {
     {
       active: true,
       title: 'Home',
-      href: '/',
+      href: '#',
     },
     {
       title: 'Find your van',
-      href: '/',
+      href: '#',
     },
     {
       title: 'About',
-      href: '/',
+      href: '#',
     },
     {
       title: 'Location',
-      href: '/',
+      href: '#',
     },
   ],
 }
