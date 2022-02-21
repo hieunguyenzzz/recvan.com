@@ -1,3 +1,4 @@
+import Image from '@components/UI/Image'
 import React from 'react'
 
 export default function Brands({ items }) {
@@ -33,7 +34,7 @@ export default function Brands({ items }) {
                 href={href}
                 className="relative mb-4 border-2 border-transparent group hover:border-primary"
               >
-                <img
+                <Image
                   className="h-[185px] w-[294px] object-cover opacity-50 saturate-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:saturate-100"
                   src={src}
                   alt={title}

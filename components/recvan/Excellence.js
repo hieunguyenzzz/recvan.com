@@ -1,3 +1,4 @@
+import Image from '@components/UI/Image'
 import React from 'react'
 
 export default function Excellence({ items }) {
@@ -15,23 +16,23 @@ export default function Excellence({ items }) {
     >
       <div className="flex flex-col px-container-offset lg:flex-row lg:gap-0">
         <div className="flex flex-wrap gap-7 lg:flex-1 ">
-          <img
-            className="w-full object-cover"
+          <Image
+            className="object-cover w-full"
             src="https://recvan.com/content/images/excellence_a.jpg"
           />
-          <img
+          <Image
             className="max-h-[15rem] w-full object-cover md:w-0 md:flex-1"
             src="https://recvan.com/content/images/excellence_b.jpg"
           />
-          <img
+          <Image
             className="max-h-[15rem] w-full object-cover md:w-0 md:flex-1"
             src="https://recvan.com/Content/images/excellence_c.jpg"
           />
         </div>
 
         <div className="flex items-center lg:sticky lg:top-0 lg:h-[calc(100vh-var(--header-height))] lg:flex-1">
-          <div className="mx-auto flex w-full max-w-xs flex-col text-black md:max-w-md ">
-            <img
+          <div className="flex flex-col w-full max-w-xs mx-auto text-black md:max-w-md ">
+            <Image
               src="https://recvan.com/Content/images/icon-compass.png"
               className="my-7 w-[4.6875rem] self-center"
             />
@@ -47,7 +48,7 @@ export default function Excellence({ items }) {
             </p>
             <p className="mt-4">
               <a
-                className="btn btn-primary w-full md:w-auto"
+                className="w-full btn btn-primary md:w-auto"
                 href="RecVanSearch"
                 role="button"
               >

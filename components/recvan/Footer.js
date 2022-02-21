@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="py-6 px-container-offset ">
           <div className="flex flex-wrap justify-between gap-4 lg:gap-8">
             <div className="flex w-full flex-col  text-sm leading-tight sm:flex-row sm:gap-4 md:max-w-[50%] lg:max-w-[307px]">
-              <ul class="flex flex-1 flex-col divide-y divide-base-content divide-opacity-30 sm:divide-y-0">
+              <ul className="flex flex-col flex-1 divide-y divide-base-content divide-opacity-30 sm:divide-y-0">
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
@@ -43,7 +43,7 @@ export default function Footer() {
                 </li>
                 <div />
               </ul>
-              <ul class="flex flex-1 flex-col divide-y divide-base-content divide-opacity-30 sm:divide-y-0">
+              <ul className="flex flex-col flex-1 divide-y divide-base-content divide-opacity-30 sm:divide-y-0">
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "

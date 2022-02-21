@@ -53,19 +53,19 @@ const Header = ({ navItems, transparent }) => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth={0}
             viewBox="0 0 1024 1024"
             height="1em"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path>
+            <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z" />
           </svg>
         </label>
       </div>
       <nav className="w-full md:flex-1 md:pl-container-offset">
         <input className="peer" hidden id="header-menu" type="checkbox"></input>
-        <div className="flex max-h-0 flex-col overflow-hidden transition-all duration-500 ease-in-out   peer-checked:h-auto peer-checked:max-h-[calc(100vh-var(--header-height))] md:h-auto md:max-h-header md:flex-row md:items-center">
+        <div className="flex max-h-0 flex-col overflow-hidden transition-all duration-500 ease-in-out peer-checked:h-auto   peer-checked:max-h-[calc(100vh-var(--header-height))] md:h-auto md:max-h-header md:flex-row md:items-center 2xl:justify-end">
           <form
             name="quickSearch"
             action="/RecVanSearch"
@@ -79,7 +79,7 @@ const Header = ({ navItems, transparent }) => {
                 placeholder="Quick Search..."
                 className="input-bordered input h-10 w-0 min-w-[160px] flex-1 !rounded-full border-base-content !border-opacity-50 bg-transparent transition-all transition placeholder:text-base-content placeholder:text-opacity-50 focus:min-w-[200px]"
               />
-              <button class="btn btn-ghost btn-circle absolute top-0 right-0 h-10 w-10">
+              <button className="absolute top-0 right-0 w-10 h-10 btn btn-ghost btn-circle">
                 <div className="text-xl icon h2">
                   <svg
                     stroke="currentColor"
@@ -96,7 +96,7 @@ const Header = ({ navItems, transparent }) => {
               </button>
             </div>
           </form>
-          <ul className="flex flex-col order-1 w-full text-sm uppercase truncate divide-y divide-base-content divide-opacity-30 border-y border-base-content border-opacity-30 md:flex-row md:items-center md:divide-none md:border-y-0 2xl:justify-center">
+          <ul className="flex flex-col order-1 w-full text-sm uppercase truncate divide-y divide-base-content divide-opacity-30 border-y border-base-content border-opacity-30 md:flex-row md:items-center md:divide-none md:border-y-0 2xl:absolute 2xl:left-1/2 2xl:w-auto 2xl:-translate-x-1/2">
             {navItems.map(({ title, href, active }, i) => {
               if (active) {
                 return (
@@ -128,9 +128,9 @@ const Header = ({ navItems, transparent }) => {
               )
             })}
           </ul>
-          <div className="flex order-1 w-full gap-2 py-3 px-container-offset md:order-3 md:w-auto">
+          <div className="flex order-1 gap-2 py-3 px-container-offset md:order-3 md:w-auto">
             <a
-              class="btn-outline btn flex-1 flex-nowrap gap-2 truncate md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full lg:w-auto"
+              className="flex-1 gap-2 truncate btn-outline btn flex-nowrap md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full lg:w-auto"
               href="tel:833-475-1658"
             >
               <div className="text-xl icon h2">
@@ -151,10 +151,10 @@ const Header = ({ navItems, transparent }) => {
               <span className="md:hidden lg:block">833-475-1658</span>
             </a>
             <button
-              class="group btn-outline btn relative flex-1 gap-2 md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full"
+              className="relative flex-1 gap-2 group btn-outline btn md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full"
               type="button"
             >
-              <div class="icon h2 text-xl">
+              <div className="text-xl icon h2">
                 <svg
                   stroke="currentColor"
                   fill="none"
@@ -174,7 +174,7 @@ const Header = ({ navItems, transparent }) => {
               </div>
               <span className="md:hidden">Favorites</span>
               <span
-                class="md:bg badge badge-sm badge-outline absolute  -top-2 -right-2 !border-base-content !border-opacity-50 !bg-base-200 !bg-opacity-[var(--header-bg-opacity)] group-hover:!bg-opacity-100 md:top-0"
+                className="md:bg badge badge-sm badge-outline absolute  -top-2 -right-2 !border-base-content !border-opacity-50 !bg-base-200 !bg-opacity-[var(--header-bg-opacity)] group-hover:!bg-opacity-100 md:top-0"
                 id="numFavorited"
               >
                 0
@@ -282,16 +282,16 @@ const Hero = () => {
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  strokewidth="{0}"
+                  strokeWidth="0"
                   viewBox="0 0 20 20"
                   height="1em"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fillrule="evenodd"
+                    fillRule="evenodd"
                     d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    cliprule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </div>
