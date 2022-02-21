@@ -209,10 +209,10 @@ export default function AllComponents() {
                   height: size.height + 'px',
                 }
               }
-              className="absolute w-full h-full"
+              className="absolute w-full h-full "
             >
               <div className="absolute inset-0 bottom-0 right-0 top-8 left-8 ">
-                <div className="relative z-10 w-full h-full bg-base-200">
+                <div className="relative z-10 w-full h-full ">
                   <div className="relative w-full h-full">
                     {componentList.map(([id], i) => {
                       return (
@@ -220,14 +220,37 @@ export default function AllComponents() {
                           {({ isVisible }) => (
                             <div
                               id={id}
-                              className="absolute top-0 left-0 hidden w-full h-full target:block"
+                              className="absolute top-0 left-0 flex-col hidden w-full h-full target:flex"
                             >
+                              <div class=" top-0 left-0 flex h-11 items-center gap-1">
+                                <a
+                                  target={'_blank'}
+                                  href={`/components/${id}`}
+                                  class="btn btn-ghost btn-xs"
+                                >
+                                  <div className="icon h2">
+                                    <svg
+                                      stroke="currentColor"
+                                      fill="currentColor"
+                                      strokeWidth={0}
+                                      viewBox="0 0 24 24"
+                                      height="1em"
+                                      width="1em"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path d="M16 7H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zM4 19v-8h12V9l.002 10H4z" />
+                                      <path d="M22 5c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2h13.001c1.101 0 1.996.895 1.999 1.994L20.002 15H20v2c1.103 0 2-.897 2-2V8.007L22.001 8V6L22 5.99V5z" />
+                                    </svg>
+                                  </div>
+                                  New Window
+                                </a>
+                              </div>
                               {isVisible ? (
                                 <iframe
                                   key={i}
                                   src={'/components/' + id}
                                   loading="lazy"
-                                  className="absolute top-0 left-0 w-full h-full "
+                                  className="left-0 flex-1 w-full border border-opacity-50 border-base-content"
                                 ></iframe>
                               ) : (
                                 ''
@@ -243,14 +266,37 @@ export default function AllComponents() {
                           {({ isVisible }) => (
                             <div
                               id={id}
-                              className="absolute top-0 left-0 hidden w-full h-full target:block"
+                              className="absolute top-0 left-0 flex-col hidden w-full h-full target:flex"
                             >
+                              <div class=" top-0 left-0 flex h-11 items-center gap-1">
+                                <a
+                                  target={'_blank'}
+                                  href={`/templates/${id}`}
+                                  class="btn btn-ghost btn-xs gap-2"
+                                >
+                                  <div className="icon h2">
+                                    <svg
+                                      stroke="currentColor"
+                                      fill="currentColor"
+                                      strokeWidth={0}
+                                      viewBox="0 0 24 24"
+                                      height="1em"
+                                      width="1em"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path d="M16 7H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zM4 19v-8h12V9l.002 10H4z" />
+                                      <path d="M22 5c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2h13.001c1.101 0 1.996.895 1.999 1.994L20.002 15H20v2c1.103 0 2-.897 2-2V8.007L22.001 8V6L22 5.99V5z" />
+                                    </svg>
+                                  </div>
+                                  New Window
+                                </a>
+                              </div>
                               {isVisible ? (
                                 <iframe
                                   key={i}
                                   src={'/templates/' + id}
                                   loading="lazy"
-                                  className="absolute top-0 left-0 w-full h-full "
+                                  className="left-0 flex-1 w-full border border-opacity-50 border-base-content"
                                 ></iframe>
                               ) : (
                                 ''
@@ -263,7 +309,7 @@ export default function AllComponents() {
                   </div>
                 </div>
               </div>
-              <div className="absolute z-20 text-xl pointer-events-none icon h2 -bottom-4 -right-4">
+              <div className="absolute z-20 text-xl pointer-events-none icon h2 -bottom-4 -right-4 text-neutral-content">
                 <svg
                   stroke="currentColor"
                   fill="none"
@@ -288,7 +334,7 @@ export default function AllComponents() {
             </div>
             <textarea
               ref={constraintsRef}
-              className="absolute resize top-4 left-4 bottom-4 right-4"
+              className="absolute resize top-4 left-4 bottom-4 right-4 bg-neutral"
             />
           </div>
         </main>

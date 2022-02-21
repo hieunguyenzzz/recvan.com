@@ -4,7 +4,7 @@ import Logo from './common/Logo'
 export default function Footer() {
   return (
     <footer className="bg-base-200 pb-[var(--bottom-offset)] text-base-content text-opacity-70">
-      <div className="divide-y max-w-screen-2xl divide-base-content divide-opacity-30 ">
+      <div className="mx-auto divide-y max-w-screen-2xl divide-base-content divide-opacity-30 ">
         <div className="py-6 px-container-offset ">
           <div className="flex flex-wrap justify-between gap-4 lg:gap-8">
             <div className="flex w-full flex-col  text-sm leading-tight sm:flex-row sm:gap-4 md:max-w-[50%] lg:max-w-[307px]">
