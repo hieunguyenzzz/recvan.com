@@ -12,7 +12,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
-                    href="/RecVanSearch?inventoryType=new"
+                    href="#/RecVanSearch?inventoryType=new"
                   >
                     New Inventory
                   </a>
@@ -20,7 +20,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
-                    href="/RecVanSearch?inventoryType=used"
+                    href="#/RecVanSearch?inventoryType=used"
                   >
                     Used Inventory
                   </a>
@@ -28,7 +28,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
-                    href="/RecVanSearch?showOnlySpecials=true"
+                    href="#/RecVanSearch?showOnlySpecials=true"
                   >
                     Show Specials
                   </a>
@@ -36,7 +36,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
-                    href="/RecVanHome/Service"
+                    href="#/RecVanHome/Service"
                   >
                     Service Your Adventure Van
                   </a>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
-                    href="/RecVanHome/About"
+                    href="#/RecVanHome/About"
                   >
                     About Rec Van
                   </a>
@@ -55,7 +55,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
-                    href="/RecVanHome/Location"
+                    href="#/RecVanHome/Location"
                   >
                     Location
                   </a>
@@ -63,7 +63,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
-                    href="/RecVanHome/Careers"
+                    href="#/RecVanHome/Careers"
                   >
                     Careers
                   </a>
@@ -71,7 +71,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
-                    href="/RecVanHome/Sell"
+                    href="#/RecVanHome/Sell"
                   >
                     Sell Your Adventure Van
                   </a>
@@ -196,11 +196,11 @@ export default function Footer() {
         </div>
         <div className="py-6 px-container-offset ">
           <p className="mb-0 text-xs text-center text-sm-right md:text-right">
-            <a className="underline" href="/RecVanHome/PrivacyPolicy">
+            <a className="underline" href="#/RecVanHome/PrivacyPolicy">
               Privacy Policy
             </a>{' '}
             |{' '}
-            <a className="underline" href="/RecVanHome/CSCA">
+            <a className="underline" href="#/RecVanHome/CSCA">
               California Supply Chain Act
             </a>{' '}
             |{' '}
