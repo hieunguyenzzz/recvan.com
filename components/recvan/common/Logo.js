@@ -11,7 +11,7 @@ export default function Logo() {
         backgroundPosition: 'center',
       }}
       className="block h-full w-full indent-[-99999px] "
-      href="/"
+      href="#/"
     >
       RecVan
     </a>
