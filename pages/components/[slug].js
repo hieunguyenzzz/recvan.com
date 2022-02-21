@@ -13,7 +13,7 @@ export default function Pages({ slug, ...props }) {
         type="radio"
         defaultValue="recvan"
       />
-      <div className="h-[300vh] bg-base-content bg-opacity-50">
+      <div>
         <Component {...props}></Component>
       </div>
     </>

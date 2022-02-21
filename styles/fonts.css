@@ -1,0 +1,26 @@
+/* Good Times */
+@font-face {
+  font-family: 'good_times_rg';
+  src: url('../assets/fonts/good_times_rg-webfont.woff2') format('woff2'),
+    url('../assets/fonts/good_times_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Gunplay */
+/* @font-face {
+    font-family: 'gunplay_rg';
+    src: url('../assets/gunplay/gunplay_rg-webfont.woff2') format('woff2'),
+      url('../assets/gunplay/gunplay_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  } */
+
+/* Sofia Pro Soft Medium */
+@font-face {
+  font-family: 'sofia_pro_soft_md';
+  src: url('../assets/fonts/SofiaProSoftMed.woff2') format('woff2'),
+    url('../assets/fonts/SofiaProSoftMed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -201,7 +201,7 @@ export default function AllComponents() {
               </div>
             </div>
           </div>
-          <div className=" relative h-[calc(100vh-72px)] overflow-auto bg-base-100">
+          <div className=" relative h-[calc(100vh-65px)] overflow-auto bg-base-100">
             <div
               style={
                 size && {
@@ -212,9 +212,9 @@ export default function AllComponents() {
               className="absolute w-full h-full"
             >
               <div className="absolute inset-0 bottom-0 right-0 top-8 left-8 ">
-                <div className="relative z-10 w-full h-full bg-base-100">
+                <div className="relative z-10 w-full h-full bg-base-300">
                   <div className="relative w-full h-full">
-                    {componentList.map(([id, Component, props], i) => {
+                    {componentList.map(([id], i) => {
                       return (
                         <VisibilitySensor key={i}>
                           {({ isVisible }) => (
@@ -237,7 +237,7 @@ export default function AllComponents() {
                         </VisibilitySensor>
                       )
                     })}
-                    {templateRoutes.map(([id, Component, props], i) => {
+                    {templateRoutes.map(([id], i) => {
                       return (
                         <VisibilitySensor key={'templateRoutes-' + i}>
                           {({ isVisible }) => (
@@ -267,28 +267,28 @@ export default function AllComponents() {
                 <svg
                   stroke="currentColor"
                   fill="none"
-                  stroke-width="0"
+                  strokewidth="{0}"
                   viewBox="0 0 24 24"
                   height="1em"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillrule="evenodd"
+                    cliprule="evenodd"
                     d="M11 5C11 3.89543 10.1046 3 9 3H5C3.89543 3 3 3.89543 3 5V9C3 10.1046 3.89543 11 5 11H9C10.1046 11 11 10.1046 11 9V5ZM9 5H5V9H9V5Z"
                     fill="currentColor"
-                  ></path>
+                  />
                   <path
                     d="M19 13H21V21H13V19H17.5858L12.2218 13.6361C11.8313 13.2456 11.8313 12.6124 12.2218 12.2219C12.6124 11.8314 13.2455 11.8314 13.6361 12.2219L19 17.5858V13Z"
                     fill="currentColor"
-                  ></path>
+                  />
                 </svg>
               </div>
             </div>
             <textarea
               ref={constraintsRef}
-              className="absolute opacity-0 resize top-4 left-4 bottom-4 right-4 opacity-80"
+              className="absolute opacity-0 resize top-4 left-4 bottom-4 right-4"
             />
           </div>
         </main>
