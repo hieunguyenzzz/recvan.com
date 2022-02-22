@@ -3,10 +3,10 @@ import React from 'react'
 
 export default function History({ items }) {
   return (
-    <div className=" bg-base-content">
+    <div className=" bg-base-200">
       <div className="container flex flex-col lg:flex-row lg:gap-0">
         <div className="relative aspect-square overflow-hidden sm:aspect-[3/2] md:aspect-[4/2] lg:flex-1  lg:overflow-visible">
-          <div className="absolute inset-0 grid w-full grid-cols-2 items-center gap-2 sm:grid-cols-3 md:relative md:grid-cols-4 lg:w-full lg:max-w-none lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+          <div className="absolute inset-0 grid items-center w-full grid-cols-2 gap-2 sm:grid-cols-3 md:relative md:grid-cols-4 lg:w-full lg:max-w-none lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
             {new Array(24)
               .fill((index) => (
                 <Image
@@ -22,11 +22,11 @@ export default function History({ items }) {
         </div>
 
         <div className="flex items-center py-12 px-container-offset lg:sticky lg:top-0 lg:h-[calc(100vh-var(--header-height))] lg:flex-1">
-          <div className="mx-auto flex w-full max-w-xs flex-col text-black md:max-w-md ">
+          <div className="flex flex-col w-full max-w-xs mx-auto text-black md:max-w-md ">
             <div className="flex justify-center gap-3">
               <Image
                 src="https://recvan.com/Content/images/icon-camping-chair.png"
-                className="my-7 w-14 self-center"
+                className="self-center my-7 w-14"
               />
               <Image
                 src="https://recvan.com/Content/images/icon-camping-chair.png"
@@ -46,7 +46,7 @@ export default function History({ items }) {
             </p>
             <p className="mt-4">
               <a
-                className="btn btn-secondary w-full md:w-auto"
+                className="w-full btn btn-secondary md:w-auto"
                 href="RecVanSearch"
                 role="button"
               >

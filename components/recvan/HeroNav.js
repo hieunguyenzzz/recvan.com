@@ -40,7 +40,7 @@ const Header = ({ navItems, transparent }) => {
           '--header-bg-opacity': '0',
         }
       }
-      className="fixed z-50 flex min-h-[var(--header-height)] w-full flex-wrap items-center  justify-between bg-neutral text-neutral-content transition-colors focus-within:bg-opacity-100 md:flex-row md:flex-nowrap md:bg-opacity-[var(--header-bg-opacity)]"
+      className="fixed z-50 flex min-h-[var(--header-height)] w-full flex-wrap items-center justify-between  bg-neutral text-neutral-content text-opacity-50 transition-colors focus-within:bg-opacity-100 md:flex-row md:flex-nowrap md:bg-opacity-[var(--header-bg-opacity)]"
     >
       <div className="z-[-1] mx-auto flex w-full flex-shrink-0 items-center justify-between gap-3 px-container-offset md:w-auto">
         <div className="h-header w-[81px] lg:w-[100px]">
