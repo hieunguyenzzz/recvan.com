@@ -36,15 +36,15 @@ function Carousel({ items }) {
     sliderWrapRef,
   })
   return (
-    <div className="w-full py-4 bg-base-200">
-      <div className="container relative px-4 max-w-none bg-base-200">
+    <div className="w-full py-4 text-white bg-neutral">
+      <div className="container relative px-4 max-w-none ">
         <div ref={sliderWrapRef} className="gap-4 carousel">
           {items.map(({ caption, src, href, title }, i) => {
             return (
               <a
                 key={i}
                 href={href}
-                className="group-a carousel-item relative w-full  sm:w-[calc((100%-1em)/2)] md:w-[calc((100%-2em)/3)] lg:w-[calc((100%-3em)/4)] xl:w-[calc((100%-4em)/5)] 2xl:w-[calc((100%-5em)/6)]"
+                className=" carousel-item relative w-full  sm:w-[calc((100%-1em)/2)] md:w-[calc((100%-2em)/3)] lg:w-[calc((100%-3em)/4)] xl:w-[calc((100%-4em)/5)] 2xl:w-[calc((100%-5em)/6)]"
               >
                 <div className="aspect-[207/134] w-full" />
                 <Image
@@ -52,8 +52,8 @@ function Carousel({ items }) {
                   src={src}
                   alt={caption}
                 />
-                <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-colors duration-700 ease-in-out hover:bg-base-200 hover:bg-opacity-70">
-                  <h5 className="p-2 py-1 uppercase transition-colors duration-700 ease-in-out border border-transparent cursor-pointer group-a-hover:border-white group-a-hover:bg-transparent bg-base-200 bg-opacity-80">
+                <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-colors duration-700 ease-in-out group hover:bg-base-200 hover:bg-opacity-70">
+                  <h5 className="p-2 py-1 uppercase transition-colors duration-700 ease-in-out border border-transparent cursor-pointer bg-base-200 bg-opacity-80 group-hover:border-white group-hover:bg-transparent">
                     {title}
                   </h5>
                 </div>

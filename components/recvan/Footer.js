@@ -3,12 +3,12 @@ import Logo from './common/Logo'
 
 export default function Footer() {
   return (
-    <footer className="bg-base-200 pb-[var(--bottom-offset)] text-base-content text-opacity-70">
-      <div className="mx-auto divide-y max-w-screen-2xl divide-base-content divide-opacity-30 ">
+    <footer className="bg-neutral pb-[var(--bottom-offset)] text-neutral-content text-opacity-70">
+      <div className="mx-auto divide-y max-w-screen-2xl divide-neutral-content divide-opacity-30 ">
         <div className="py-6 px-container-offset ">
           <div className="flex flex-wrap justify-between gap-4 lg:gap-8">
             <div className="flex w-full flex-col  text-sm leading-tight sm:flex-row sm:gap-4 md:max-w-[50%] lg:max-w-[307px]">
-              <ul className="flex flex-col flex-1 divide-y divide-base-content divide-opacity-30 sm:divide-y-0">
+              <ul className="flex flex-col flex-1 divide-y divide-neutral-content divide-opacity-30 sm:divide-y-0">
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
@@ -43,7 +43,7 @@ export default function Footer() {
                 </li>
                 <div />
               </ul>
-              <ul className="flex flex-col flex-1 divide-y divide-base-content divide-opacity-30 sm:divide-y-0">
+              <ul className="flex flex-col flex-1 divide-y divide-neutral-content divide-opacity-30 sm:divide-y-0">
                 <li>
                   <a
                     className="block py-1 leading-relaxed uppercase hover:opacity-70 sm:underline "
@@ -95,9 +95,9 @@ export default function Footer() {
                     <input
                       type="text"
                       placeholder="Your email"
-                      className="bg-transparent input-bordered input placeholder:text-base-content placeholder:text-opacity-40"
+                      className="bg-transparent input-bordered input placeholder:text-neutral-content placeholder:text-opacity-40"
                     />
-                    <span className="text-sm text-black cursor-pointer bg-base-content hover:bg-opacity-70">
+                    <span className="text-sm text-black cursor-pointer bg-neutral-content hover:bg-opacity-70">
                       SUBSCRIBE
                     </span>
                   </label>

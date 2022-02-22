@@ -67,9 +67,9 @@ export default function AllComponents() {
         <main className="btext-base-content drawer-content block h-screen flex-grow !overflow-hidden ">
           <div
             id="nav"
-            className="sticky inset-x-0 top-0 z-50 w-full border-b border-base-200 bg-base-100 text-base-content transition duration-200 ease-in-out"
+            className="sticky inset-x-0 top-0 z-50 w-full transition duration-200 ease-in-out border-b border-base-200 bg-base-100 text-base-content"
           >
-            <div className="navbar mx-auto max-w-none space-x-1">
+            <div className="mx-auto space-x-1 navbar max-w-none">
               <div className="flex-none">
                 <label
                   htmlFor="main-menu"
@@ -79,7 +79,7 @@ export default function AllComponents() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    className="inline-block h-6 w-6 stroke-current"
+                    className="inline-block w-6 h-6 stroke-current"
                   >
                     <path
                       strokeLinecap="round"
@@ -90,13 +90,13 @@ export default function AllComponents() {
                   </svg>
                 </label>
               </div>
-              <div className="flex flex-none items-center lg:hidden">
+              <div className="flex items-center flex-none lg:hidden">
                 <a
                   href="#/"
                   aria-label="Homepage"
-                  className="flex-0 nuxt-link-active btn btn-ghost px-2 md:px-4"
+                  className="px-2 flex-0 nuxt-link-active btn btn-ghost md:px-4"
                 >
-                  <div className="font-title inline-block text-3xl text-primary">
+                  <div className="inline-block text-3xl font-title text-primary">
                     <span className="lowercase">Recvan</span>
                     <span className="uppercase text-base-content">.com</span>
                   </div>
@@ -106,12 +106,12 @@ export default function AllComponents() {
               <div className="flex-1" />
 
               <div title="Change Theme" className="dropdown-end dropdown">
-                <div tabIndex={0} className="btn btn-ghost m-1 normal-case">
+                <div tabIndex={0} className="m-1 normal-case btn btn-ghost">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    className="inline-block h-6 w-6 stroke-current md:mr-2"
+                    className="inline-block w-6 h-6 stroke-current md:mr-2"
                   >
                     <path
                       strokeLinecap="round"
@@ -124,13 +124,13 @@ export default function AllComponents() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1792 1792"
-                    className="ml-1 inline-block h-4 w-4 fill-current"
+                    className="inline-block w-4 h-4 ml-1 fill-current"
                   >
                     <path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z" />
                   </svg>
                 </div>
-                <div className="dropdown-content rounded-b-box top-px mt-16 max-h-96 w-52 overflow-y-auto bg-base-200 text-base-content shadow-2xl">
-                  <ul className="compact menu p-4">
+                <div className="mt-16 overflow-y-auto shadow-2xl dropdown-content rounded-b-box top-px max-h-96 w-52 bg-base-200 text-base-content">
+                  <ul className="p-4 compact menu">
                     <li>
                       <a href="#">
                         <label
@@ -209,24 +209,24 @@ export default function AllComponents() {
                   height: size.height + 'px',
                 }
               }
-              className="absolute h-full w-full "
+              className="absolute w-full h-full "
             >
               <div className="absolute inset-0 bottom-0 right-0 top-8 left-8 ">
-                <div className="relative z-10 h-full w-full ">
-                  <div className="relative h-full w-full">
+                <div className="relative z-10 w-full h-full ">
+                  <div className="relative w-full h-full">
                     {componentList.map(([id], i) => {
                       return (
                         <VisibilitySensor key={i}>
                           {({ isVisible }) => (
                             <div
                               id={id}
-                              className="absolute top-0 left-0 hidden h-full w-full flex-col target:flex"
+                              className="absolute top-0 left-0 flex-col hidden w-full h-full target:flex"
                             >
-                              <div className=" top-0 left-0 flex h-11 items-center gap-1">
+                              <div className="top-0 left-0 flex items-center gap-1  h-11">
                                 <a
                                   target={'_blank'}
                                   href={`/components/${id}`}
-                                  className="btn btn-ghost btn-xs gap-2"
+                                  className="gap-2 btn btn-ghost btn-xs"
                                 >
                                   <div className="icon h2">
                                     <svg
@@ -250,7 +250,7 @@ export default function AllComponents() {
                                   key={i}
                                   src={'/components/' + id}
                                   loading="lazy"
-                                  className="left-0 w-full flex-1 border border-base-content border-opacity-50"
+                                  className="left-0 flex-1 w-full border border-opacity-50 border-base-content"
                                 ></iframe>
                               ) : (
                                 ''
@@ -262,17 +262,17 @@ export default function AllComponents() {
                     })}
                     {templateRoutes.map(([id], i) => {
                       return (
-                        <VisibilitySensor key={'templateRoutes-' + i}>
+                        <VisibilitySensor key={'Templates-' + i}>
                           {({ isVisible }) => (
                             <div
-                              id={id}
-                              className="absolute top-0 left-0 hidden h-full w-full flex-col target:flex"
+                              id={'Templates-' + id}
+                              className="absolute top-0 left-0 flex-col hidden w-full h-full target:flex"
                             >
-                              <div className=" top-0 left-0 flex h-11 items-center gap-1">
+                              <div className="top-0 left-0 flex items-center gap-1  h-11">
                                 <a
                                   target={'_blank'}
                                   href={`/templates/${id}`}
-                                  className="btn btn-ghost btn-xs gap-2"
+                                  className="gap-2 btn btn-ghost btn-xs"
                                 >
                                   <div className="icon h2">
                                     <svg
@@ -296,7 +296,7 @@ export default function AllComponents() {
                                   key={i}
                                   src={'/templates/' + id}
                                   loading="lazy"
-                                  className="left-0 w-full flex-1 border border-base-content border-opacity-50"
+                                  className="left-0 flex-1 w-full border border-opacity-50 border-base-content"
                                 ></iframe>
                               ) : (
                                 ''
@@ -309,7 +309,7 @@ export default function AllComponents() {
                   </div>
                 </div>
               </div>
-              <div className="icon h2 pointer-events-none absolute -bottom-4 -right-4 z-20 text-xl text-neutral-content">
+              <div className="absolute z-20 text-xl pointer-events-none icon h2 -bottom-4 -right-4 text-neutral-content">
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -325,22 +325,22 @@ export default function AllComponents() {
             </div>
             <textarea
               ref={constraintsRef}
-              className="absolute top-4 left-4 bottom-4 right-4 resize bg-neutral"
+              className="absolute resize top-4 left-4 bottom-4 right-4 bg-neutral"
             />
           </div>
         </main>
         <div className="drawer-side">
           <label htmlFor="main-menu" className="drawer-overlay" />
-          <aside className="flex w-80 flex-col justify-start border-r border-base-200 bg-base-100 text-base-content">
-            <div className="sticky inset-x-0 top-0 z-50 hidden w-full border-b border-base-200 bg-base-100 transition duration-200 ease-in-out lg:block">
-              <div className="navbar mx-auto max-w-none space-x-1">
-                <div className="flex flex-none items-center">
+          <aside className="flex flex-col justify-start border-r w-80 border-base-200 bg-base-100 text-base-content">
+            <div className="sticky inset-x-0 top-0 z-50 hidden w-full transition duration-200 ease-in-out border-b border-base-200 bg-base-100 lg:block">
+              <div className="mx-auto space-x-1 navbar max-w-none">
+                <div className="flex items-center flex-none">
                   <a
                     href="#/"
                     aria-label="Homepage"
-                    className="flex-0 nuxt-link-active btn btn-ghost px-2 md:px-4"
+                    className="px-2 flex-0 nuxt-link-active btn btn-ghost md:px-4"
                   >
-                    <div className="font-title inline-block text-3xl text-primary">
+                    <div className="inline-block text-3xl font-title text-primary">
                       <span className="lowercase">recvan</span>
                       <span className="uppercase text-base-content">.com</span>
                     </div>
@@ -349,8 +349,8 @@ export default function AllComponents() {
               </div>
             </div>
             <div>
-              <ul className="compact menu flex flex-col p-4 pt-2">
-                <li className="menu-title mt-4">
+              <ul className="flex flex-col p-4 pt-2 compact menu">
+                <li className="mt-4 menu-title">
                   <span>Components</span>
                 </li>
                 {componentList.map(([id], i) => {
@@ -361,7 +361,7 @@ export default function AllComponents() {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          className="mr-2 inline-block h-6 w-6 stroke-current"
+                          className="inline-block w-6 h-6 mr-2 stroke-current"
                         >
                           <path
                             strokeLinecap="round"
@@ -375,18 +375,18 @@ export default function AllComponents() {
                     </li>
                   )
                 })}
-                <li className="menu-title mt-4">
+                <li className="mt-4 menu-title">
                   <span>Templates</span>
                 </li>
                 {templateRoutes.map(([id], i) => {
                   return (
                     <li key={'Templates-' + i}>
-                      <a href={'#' + id} className="capitalize">
+                      <a href={'#Templates-' + id} className="capitalize">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          className="mr-2 inline-block h-6 w-6 stroke-current"
+                          className="inline-block w-6 h-6 mr-2 stroke-current"
                         >
                           <path
                             strokeLinecap="round"

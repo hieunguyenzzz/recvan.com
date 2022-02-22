@@ -40,7 +40,7 @@ const Header = ({ navItems, transparent }) => {
           '--header-bg-opacity': '0',
         }
       }
-      className="fixed z-50 flex min-h-[var(--header-height)] w-full flex-wrap items-center  justify-between bg-base-200 text-base-content transition-colors focus-within:bg-opacity-100 md:flex-row md:flex-nowrap md:bg-opacity-[var(--header-bg-opacity)]"
+      className="fixed z-50 flex min-h-[var(--header-height)] w-full flex-wrap items-center  justify-between bg-neutral text-neutral-content transition-colors focus-within:bg-opacity-100 md:flex-row md:flex-nowrap md:bg-opacity-[var(--header-bg-opacity)]"
     >
       <div className="z-[-1] mx-auto flex w-full flex-shrink-0 items-center justify-between gap-3 px-container-offset md:w-auto">
         <div className="h-header w-[81px] lg:w-[100px]">
@@ -77,7 +77,7 @@ const Header = ({ navItems, transparent }) => {
               <input
                 type="text"
                 placeholder="Quick Search..."
-                className="input-bordered input h-10 w-0 min-w-[160px] flex-1 !rounded-full border-base-content !border-opacity-50 bg-transparent transition-all transition placeholder:text-base-content placeholder:text-opacity-50 focus:min-w-[200px]"
+                className="input-bordered input h-10 w-0 min-w-[160px] flex-1 !rounded-full border-neutral-content !border-opacity-50 bg-transparent transition-all transition placeholder:text-neutral-content placeholder:text-opacity-50 focus:min-w-[200px]"
               />
               <button className="absolute top-0 right-0 w-10 h-10 btn btn-ghost btn-circle">
                 <div className="text-xl icon h2">
@@ -96,7 +96,7 @@ const Header = ({ navItems, transparent }) => {
               </button>
             </div>
           </form>
-          <ul className="flex flex-col order-1 w-full text-sm uppercase truncate divide-y divide-base-content divide-opacity-30 border-y border-base-content border-opacity-30 md:flex-row md:items-center md:divide-none md:border-y-0 2xl:absolute 2xl:left-1/2 2xl:w-auto 2xl:-translate-x-1/2">
+          <ul className="flex flex-col order-1 w-full text-sm uppercase truncate divide-y divide-neutral-content divide-opacity-30 border-y border-neutral-content border-opacity-30 md:flex-row md:items-center md:divide-none md:border-y-0 2xl:absolute 2xl:left-1/2 2xl:w-auto 2xl:-translate-x-1/2">
             {navItems.map(({ title, href, active }, i) => {
               if (active) {
                 return (
@@ -106,7 +106,7 @@ const Header = ({ navItems, transparent }) => {
                   >
                     <a
                       href={href}
-                      className="relative flex items-center bg-base-content bg-opacity-10  px-8  py-3 text-white after:absolute after:top-0  after:left-0 after:h-full after:w-1 after:bg-white after:content-[''] md:h-header md:bg-transparent md:bg-none md:px-3 md:text-center md:after:left-0 md:after:h-1 md:after:w-full md:hover:bg-base-content md:hover:bg-opacity-10"
+                      className="relative flex items-center bg-neutral-content bg-opacity-10  px-8  py-3 text-white after:absolute after:top-0  after:left-0 after:h-full after:w-1 after:bg-white after:content-[''] md:h-header md:bg-transparent md:bg-none md:px-3 md:text-center md:after:left-0 md:after:h-1 md:after:w-full md:hover:bg-neutral-content md:hover:bg-opacity-10"
                     >
                       {title}
                     </a>
@@ -120,7 +120,7 @@ const Header = ({ navItems, transparent }) => {
                 >
                   <a
                     href={href}
-                    className="flex items-center px-8 py-3 borde bg-opacity-10 md:h-header md:bg-opacity-0 md:bg-none md:px-3 md:text-center md:hover:bg-base-content md:hover:bg-opacity-10"
+                    className="flex items-center px-8 py-3 borde bg-opacity-10 md:h-header md:bg-opacity-0 md:bg-none md:px-3 md:text-center md:hover:bg-neutral-content md:hover:bg-opacity-10"
                   >
                     {title}
                   </a>
@@ -174,7 +174,7 @@ const Header = ({ navItems, transparent }) => {
               </div>
               <span className="md:hidden">Favorites</span>
               <span
-                className="md:bg badge badge-sm badge-outline absolute  -top-2 -right-2 !border-base-content !border-opacity-50 !bg-base-200 !bg-opacity-[var(--header-bg-opacity)] group-hover:!bg-opacity-100 md:top-0"
+                className="badge badge-sm badge-outline absolute -top-2  -right-2 !border-neutral-content !border-opacity-50 !bg-neutral !bg-opacity-[var(--header-bg-opacity)] text-neutral-content group-hover:!bg-opacity-100 group-hover:text-neutral-content md:top-0"
                 id="numFavorited"
               >
                 0
@@ -188,7 +188,7 @@ const Header = ({ navItems, transparent }) => {
 }
 const Hero = () => {
   return (
-    <div className="relative isolate flex w-full items-center bg-cover pt-header bg-blend-soft-light md:h-[600px] md:min-h-screen md:pb-[120px]">
+    <div className="relative isolate flex w-full items-center bg-cover pt-header text-neutral-content bg-blend-soft-light md:h-[600px] md:min-h-screen md:pb-[120px]">
       <div
         style={{
           backgroundImage:
@@ -225,7 +225,7 @@ const Hero = () => {
         </div>
         <div
           id="leadForm"
-          className="pt-4 md:border-l  md:border-l-base-content md:border-opacity-50 md:pt-[0.3125rem] md:pl-7 xl:max-w-sm"
+          className="pt-4 md:border-l  md:border-l-neutral-content md:border-opacity-50 md:pt-[0.3125rem] md:pl-7 xl:max-w-sm"
         >
           <form
             action="/RecVanHome/HomeEmail"
@@ -235,7 +235,7 @@ const Hero = () => {
           >
             <div className="block col-span-2 md:col-span-1">
               <input
-                className="text-base-conten input-bordered input block w-full !border-opacity-50 bg-white"
+                className="text-neutral-conten input-bordered input block w-full !border-opacity-50 bg-white"
                 data-val="true"
                 data-val-required="First Name is required"
                 id="FirstName"
@@ -246,7 +246,7 @@ const Hero = () => {
             </div>
             <div className="block col-span-2 md:col-span-1">
               <input
-                className="block w-full bg-white input-bordered input text-base-content "
+                className="block w-full bg-white input-bordered input text-neutral-content "
                 data-val="true"
                 data-val-required="Last Name is required"
                 id="LastName"
@@ -257,7 +257,7 @@ const Hero = () => {
             </div>
             <div className="block col-span-2">
               <input
-                className="block w-full bg-white input-bordered input text-base-content "
+                className="block w-full bg-white input-bordered input text-neutral-content "
                 id="Telephone"
                 name="Email.Telephone"
                 placeholder="Phone Number (optional)"
@@ -266,7 +266,7 @@ const Hero = () => {
             </div>
             <div className="block col-span-2">
               <input
-                className="block w-full bg-white input-bordered input text-base-content "
+                className="block w-full bg-white input-bordered input text-neutral-content "
                 data-val="true"
                 data-val-email="Please enter a valid email address"
                 data-val-required="Email is required"
@@ -296,7 +296,7 @@ const Hero = () => {
                 </svg>
               </div>
             </button>
-            <p className="col-span-2 text-xs hint-text font-body text-base-content text-opacity-70">
+            <p className="col-span-2 text-xs hint-text font-body text-neutral-content text-opacity-70">
               We will never share your contact information and you can
               unsubscribe at any time.
             </p>

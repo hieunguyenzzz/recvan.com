@@ -78,6 +78,14 @@ export const templateRoutes = [
       ['footer', Footer, FooterProps],
     ],
   ],
+  [
+    'form-more-info',
+    [
+      ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
+      ['form-more-info', FormMoreInfo, FormMoreInfoProps],
+      ['footer', Footer, FooterProps],
+    ],
+  ],
 ]
 
 export default componentRoutes

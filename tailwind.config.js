@@ -31,8 +31,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('daisyui'),
     require('./styles/plugins/nestedGroup'),
+    require('daisyui'),
     require('@tailwindcss/typography'),
   ],
 }

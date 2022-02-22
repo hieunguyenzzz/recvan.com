@@ -1,22 +1,6 @@
+import FormControl from '@components/UI/Form/FormControl'
 import React from 'react'
-const FormControl = ({ label, required, inputProps = {}, children }) => {
-  return (
-    <div className="form-control">
-      <label htmlFor="FirstName" className="flex justify-start gap-2 label">
-        {required && <span className="text-error">* </span>}
-        <span>{label}</span>
-      </label>
-      <div className="input-group">
-        {children || (
-          <input
-            className="w-full bg-white input-bordered input "
-            {...inputProps}
-          />
-        )}
-      </div>
-    </div>
-  )
-}
+
 export default function FormMoreInfo() {
   return (
     <div className="container py-6">
@@ -37,10 +21,10 @@ export default function FormMoreInfo() {
             style={{ width: '100%' }}
             noValidate="novalidate"
             cr-attached="true"
-            className="grid grid-cols-2 gap-x-8 gap-y-4"
+            className="grid grid-cols-12 gap-x-8 gap-y-4"
           >
             <h4 className="col-span-full">Personal Information</h4>
-            <div className="col-span-full">
+            <div className="col-span-full sm:col-span-6">
               <FormControl
                 label="First name"
                 required
@@ -49,7 +33,7 @@ export default function FormMoreInfo() {
                 }}
               />
             </div>
-            <div className="col-span-full">
+            <div className="col-span-full sm:col-span-6">
               <FormControl
                 label="Last name"
                 required
@@ -61,7 +45,7 @@ export default function FormMoreInfo() {
               />
             </div>
             <h4 className="col-span-full">Contact Information</h4>
-            <div className="col-span-full">
+            <div className="col-span-full sm:col-span-6 md:col-span-4 lg:col-span-3">
               <FormControl
                 label="Telephone"
                 inputProps={{
@@ -72,7 +56,7 @@ export default function FormMoreInfo() {
                 }}
               />
             </div>
-            <div className="col-span-full">
+            <div className="col-span-full sm:col-span-6 md:col-span-4 lg:col-span-3">
               <FormControl
                 label="Mobile Phone"
                 inputProps={{
@@ -83,7 +67,7 @@ export default function FormMoreInfo() {
                 }}
               />
             </div>
-            <div className="col-span-full">
+            <div className="col-span-full md:col-span-8 lg:col-span-6">
               <FormControl
                 label="Email"
                 required
@@ -94,7 +78,7 @@ export default function FormMoreInfo() {
                 }}
               />
             </div>
-            <div className="col-span-full">
+            <div className="col-span-full sm:col-span-6 md:col-span-4 lg:col-span-3">
               <FormControl
                 label="Zip code"
                 required
@@ -113,41 +97,31 @@ export default function FormMoreInfo() {
                   name: 'Comments',
                   type: 'textarea',
                 }}
+              >
+                <textarea
+                  className="w-full p-3 bg-white textarea-bordered textarea"
+                  cols={30}
+                  id="Comments"
+                  name="Comments"
+                  rows={6}
+                  defaultValue={''}
+                />
+              </FormControl>
+            </div>
+
+            <div className="col-span-full">
+              <div>
+                <span className="text-error">*</span> - Indicates a required
+                field
+              </div>
+            </div>
+            <div className="col-span-full">
+              <input
+                type="submit"
+                className=" btn btn-primary"
+                defaultValue="Submit"
               />
             </div>
-
-            <div>
-              <div className="col-sm-12">
-                <div className="labelDiv">
-                  <label htmlFor="Comments">Comments</label>
-                </div>
-                <div className="form-group" style={{ marginBottom: 20 }}>
-                  <textarea
-                    className="lmrv-input form-control"
-                    cols={30}
-                    id="Comments"
-                    name="Comments"
-                    rows={6}
-                    defaultValue={''}
-                  />
-                </div>
-              </div>
-              <div className="col-sm-12">
-                <div
-                  className="required-indicator"
-                  style={{ marginBottom: 10 }}
-                >
-                  <span className="alert-element">*</span> - Indicates a
-                  required field
-                </div>
-              </div>
-            </div>
-
-            <input
-              type="submit"
-              className="mt-4 mb-4 btn btn-primary"
-              defaultValue="Submit"
-            />
           </form>
         </div>
       </div>
