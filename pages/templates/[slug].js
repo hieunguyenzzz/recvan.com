@@ -13,7 +13,7 @@ export default function Pages({ slug, ...props }) {
         type="radio"
         defaultValue="recvan"
       />
-      <div className="flex flex-col justify-between min-h-screen bg-base-300">
+      <div className="flex flex-col justify-between min-h-screen ">
         {componentRoutes.map(([key, Component, props]) => {
           return <Component key={key} {...props} />
         })}

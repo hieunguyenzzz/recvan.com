@@ -43,8 +43,6 @@ const componentRoutes = [
   ['social-instagram', SocialInstagram, SocialInstagramProps],
   ['recvan-blog', RecvanBlog, RecvanBlogProps],
   ['footer', Footer, FooterProps],
-  ['inventory-detail', InventoryDetail, InventoryDetailProps],
-  ['inventory-listing', InventoryListing, InventoryListingProps],
   ['location', Location, LocationProps],
   ['form-email-offers', FormEmailOffers, FormEmailOffersProps],
   ['page-content', PageContent, PageContentProps],
@@ -83,6 +81,46 @@ export const templateRoutes = [
     [
       ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
       ['form-more-info', FormMoreInfo, FormMoreInfoProps],
+      ['footer', Footer, FooterProps],
+    ],
+  ],
+  [
+    'form-email-offers',
+    [
+      ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
+      ['form-email-offers', FormEmailOffers, FormEmailOffersProps],
+      ['footer', Footer, FooterProps],
+    ],
+  ],
+  [
+    'form-sell',
+    [
+      ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
+      ['page-content', PageContent, PageContentProps],
+      ['footer', Footer, FooterProps],
+    ],
+  ],
+  [
+    'page-content',
+    [
+      ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
+      ['page-content', PageContent, PageContentProps],
+      ['footer', Footer, FooterProps],
+    ],
+  ],
+  [
+    'inventory-detail',
+    [
+      ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
+      ['inventory-detail', InventoryDetail, InventoryDetailProps],
+      ['footer', Footer, FooterProps],
+    ],
+  ],
+  [
+    'inventory-listing',
+    [
+      ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
+      ['inventory-listing', InventoryListing, InventoryListingProps],
       ['footer', Footer, FooterProps],
     ],
   ],

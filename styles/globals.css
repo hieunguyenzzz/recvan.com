@@ -18,11 +18,11 @@
   --ac: 0 0% 100%;
   --n: 0 0% 15%;
   --nf: 0 0% 30%;
-  --nc: 0 0% 100%;
-  --b1: 45 14% 95%;
-  --b2: 43 16% 71%;
-  --b3: 45 14% 95%;
-  --bc: 0 0% 0%;
+  --nc: 43 16% 71%;
+  --b1: 30 14% 97%;
+  --b2: 45 14% 95%;
+  --b3: 43 16% 71%;
+  --bc: 60 0% 43%;
   --in: 202 100% 70%;
   --su: 89 61.6% 52%;
   --wa: 54 68.8% 63.5%;
@@ -186,10 +186,10 @@ h2 {
   @apply tracking-widest font-heading;
 }
 body {
-  @apply bg-base-300 font-body text-base-content;
+  @apply bg-base-100 font-body text-base-content;
 }
 [data-theme]:checked ~ * {
-  @apply bg-base-300 font-body text-base-content;
+  @apply bg-base-100 font-body text-base-content;
 }
 @screen md {
   :root {
@@ -202,15 +202,72 @@ body {
     --header-height: 100px;
   }
 }
-/* custom */
-.btn {
-  min-height: 2.5rem;
-  height: 2.5rem;
-}
-.input {
-  height: 2.5rem;
-  font-size: 1rem;
-}
-.icon {
-  font-size: 1.4em;
+
+@layer components {
+  .input {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+  .icon {
+    font-size: 1.4em;
+  }
+  .input,
+  .textarea,
+  .select {
+    border-color: hsla(var(--nc) / 0.5);
+    border-width: 1px;
+  }
+  .input:focus,
+  .textarea:focus,
+  .select:focus {
+    border-color: hsla(var(--nc) / 1);
+    box-shadow: 0 0 0 2px hsl(var(--nc) / 0.2), 0 0 0 4px hsla(var(--nc) / 0.2);
+  }
+  .focusable:focus {
+    border-color: hsla(var(--nc) / 1);
+    box-shadow: 0 0 0 2px hsl(var(--nc) / 0.2), 0 0 0 4px hsla(var(--nc) / 0.2);
+  }
+  .image-label {
+    position: absolute;
+    top: 7px;
+    left: -5px;
+    width: auto;
+    height: 1.5rem;
+    padding: 0.125rem 0.625rem 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+    color: theme('colors.neutral-content');
+    background: theme('colors.neutral');
+    text-transform: uppercase;
+    z-index: 10;
+  }
+  .image-label::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: auto;
+    bottom: -6px;
+    border: 3px solid;
+    border-color: theme('colors.neutral-content')
+      theme('colors.neutral-content') transparent transparent;
+  }
+  .btn-outline {
+    --tw-text-opacity: 0.8;
+    --tw-border-opacity: 0.2;
+    --tw-bg-opacity: 0;
+    background-color: transparent;
+    border-color: hsla(var(--bc) / var(--tw-border-opacity, 1));
+    color: hsla(var(--bc) / var(--tw-text-opacity, 1));
+    background-color: hsla(var(--bc) / var(--tw-bg-opacity, 1));
+  }
+  .btn-outline:hover {
+    --tw-text-opacity: 1;
+    --tw-bg-opacity: 0.1;
+    --tw-border-opacity: 0.3;
+    color: hsla(var(--bc) / var(--tw-text-opacity, 1));
+    background-color: hsla(var(--bc) / var(--tw-bg-opacity, 1));
+  }
 }

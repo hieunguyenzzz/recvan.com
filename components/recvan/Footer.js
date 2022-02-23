@@ -3,11 +3,11 @@ import Logo from './common/Logo'
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral pb-[var(--bottom-offset)] text-neutral-content text-opacity-70">
+    <footer className="bg-neutral pb-[var(--bottom-offset)] text-neutral-content text-opacity-80">
       <div className="mx-auto divide-y max-w-screen-2xl divide-neutral-content divide-opacity-30 ">
         <div className="py-6 px-container-offset ">
           <div className="flex flex-wrap justify-between gap-4 lg:gap-8">
-            <div className="flex w-full flex-col  text-sm leading-tight sm:flex-row sm:gap-4 md:max-w-[50%] lg:max-w-[307px]">
+            <div className="flex w-full flex-col text-sm leading-tight sm:flex-row sm:gap-4 md:max-w-[50%] lg:max-w-[307px]">
               <ul className="flex flex-col flex-1 divide-y divide-neutral-content divide-opacity-30 sm:divide-y-0">
                 <li>
                   <a
@@ -87,7 +87,7 @@ export default function Footer() {
               >
                 <div className="form-control">
                   <label className="label">
-                    <span className="uppercase label-text text-opacity-70">
+                    <span className="text-opacity-50 uppercase label-text text-neutral-content">
                       <h6>GET EMAIL OFFERS</h6>
                     </span>
                   </label>

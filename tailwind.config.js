@@ -11,6 +11,7 @@ module.exports = {
     namedGroups: ['a', 'b', 'c', 'd'],
     extend: {
       spacing: {
+        'view-height-fit': 'calc(100vh-var(--header-height))',
         header: 'var(--header-height)',
         'container-offset': '1rem',
       },
@@ -31,8 +32,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('./styles/plugins/nestedGroup'),
     require('daisyui'),
+    require('./styles/plugins/nestedGroup'),
     require('@tailwindcss/typography'),
   ],
 }

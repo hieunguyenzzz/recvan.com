@@ -40,7 +40,7 @@ const Header = ({ navItems, transparent }) => {
           '--header-bg-opacity': '0',
         }
       }
-      className="fixed z-50 flex min-h-[var(--header-height)] w-full flex-wrap items-center justify-between  bg-neutral text-neutral-content text-opacity-50 transition-colors focus-within:bg-opacity-100 md:flex-row md:flex-nowrap md:bg-opacity-[var(--header-bg-opacity)]"
+      className="fixed z-50 flex min-h-[var(--header-height)] w-full flex-wrap items-center justify-between bg-neutral  text-neutral-content transition-colors focus-within:bg-opacity-100 md:flex-row md:flex-nowrap md:bg-opacity-[var(--header-bg-opacity)]"
     >
       <div className="z-[-1] mx-auto flex w-full flex-shrink-0 items-center justify-between gap-3 px-container-offset md:w-auto">
         <div className="h-header w-[81px] lg:w-[100px]">
@@ -48,7 +48,7 @@ const Header = ({ navItems, transparent }) => {
         </div>
         <label
           htmlFor="header-menu"
-          className="btn-outline btn btn-ghost btn-square btn-sm !h-[40px] w-[56px] rounded text-3xl md:hidden"
+          className="btn-outline btn btn-ghost btn-square btn-sm !h-[40px] w-[56px] rounded border-neutral-content border-opacity-60 text-3xl text-neutral-content text-opacity-70 md:hidden"
         >
           <svg
             stroke="currentColor"
@@ -79,7 +79,7 @@ const Header = ({ navItems, transparent }) => {
                 placeholder="Quick Search..."
                 className="input-bordered input h-10 w-0 min-w-[160px] flex-1 !rounded-full border-neutral-content !border-opacity-50 bg-transparent transition-all transition placeholder:text-neutral-content placeholder:text-opacity-50 focus:min-w-[200px]"
               />
-              <button className="absolute top-0 right-0 w-10 h-10 btn btn-ghost btn-circle">
+              <button className="absolute top-0 right-0 w-10 h-10 min-h-0 minh btn btn-ghost btn-circle">
                 <div className="text-xl icon h2">
                   <svg
                     stroke="currentColor"
@@ -130,7 +130,7 @@ const Header = ({ navItems, transparent }) => {
           </ul>
           <div className="flex order-1 gap-2 py-3 px-container-offset md:order-3 md:w-auto">
             <a
-              className="flex-1 gap-2 truncate btn-outline btn flex-nowrap md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full lg:w-auto"
+              className="flex-1 min-h-0 gap-2 truncate btn-outline btn flex-nowrap md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full lg:w-auto"
               href="tel:833-475-1658"
             >
               <div className="text-xl icon h2">
@@ -151,7 +151,7 @@ const Header = ({ navItems, transparent }) => {
               <span className="md:hidden lg:block">833-475-1658</span>
             </a>
             <button
-              className="relative flex-1 gap-2 group btn-outline btn md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full"
+              className="relative flex-1 min-h-0 gap-2 group btn-outline btn md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full"
               type="button"
             >
               <div className="text-xl icon h2">

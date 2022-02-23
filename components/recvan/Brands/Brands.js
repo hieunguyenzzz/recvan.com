@@ -16,7 +16,7 @@ export default function Brands({ items }) {
     >
       <div className="flex flex-col gap-24 lg:flex-row lg:gap-0 ">
         <div className="pointer-events-none sticky top-0 isolate z-10 flex max-h-screen min-h-screen w-full items-start pt-[var(--header-height)] lg:flex-1 lg:items-center lg:pt-0">
-          <div className="flex w-full flex-col gap-3 bg-neutral px-3 py-3 text-center text-neutral-content lg:text-right">
+          <div className="flex flex-col w-full gap-3 px-3 py-3 text-center text-white bg-neutral lg:text-right">
             <h2 className="text-2xl font-bold uppercase leading-[0.8]">
               Brands You
             </h2>
@@ -32,7 +32,7 @@ export default function Brands({ items }) {
               <a
                 key={i}
                 href={href}
-                className="group relative mb-4 border-2 border-transparent hover:border-primary"
+                className="relative mb-4 border-2 border-transparent group hover:border-primary"
               >
                 <Image
                   className="h-[185px] w-[294px] object-cover opacity-50 saturate-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:saturate-100"

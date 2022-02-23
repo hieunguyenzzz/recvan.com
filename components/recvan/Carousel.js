@@ -52,8 +52,8 @@ function Carousel({ items }) {
                   src={src}
                   alt={caption}
                 />
-                <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-colors duration-700 ease-in-out group hover:bg-base-200 hover:bg-opacity-70">
-                  <h5 className="p-2 py-1 uppercase transition-colors duration-700 ease-in-out border border-transparent cursor-pointer bg-base-200 bg-opacity-80 group-hover:border-white group-hover:bg-transparent">
+                <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-colors duration-700 ease-in-out group text-neutral-content hover:bg-neutral hover:bg-opacity-70">
+                  <h5 className="p-2 py-1 uppercase transition-colors duration-700 ease-in-out border border-transparent cursor-pointer bg-neutral bg-opacity-80 text-neutral-content group-hover:border-white group-hover:bg-transparent">
                     {title}
                   </h5>
                 </div>
@@ -64,7 +64,7 @@ function Carousel({ items }) {
         <button
           disabled={!prevAble}
           onClick={handlePrev}
-          className="absolute left-0 flex items-center justify-center w-10 h-10 text-xl -translate-y-1/2 rounded-full top-1/2 bg-base-200 disabled:opacity-50"
+          className="absolute left-0 flex items-center justify-center w-10 h-10 text-xl text-white -translate-y-1/2 rounded-full top-1/2 bg-neutral disabled:opacity-50"
           aria-label="Next"
           type="button"
           aria-disabled={!prevAble}
@@ -89,7 +89,7 @@ function Carousel({ items }) {
         <button
           disabled={!nextAble}
           onClick={handleNext}
-          className="absolute right-0 flex items-center justify-center w-10 h-10 text-xl rotate-180 -translate-y-1/2 rounded-full top-1/2 bg-base-200 disabled:opacity-50"
+          className="absolute right-0 flex items-center justify-center w-10 h-10 text-xl text-white rotate-180 -translate-y-1/2 rounded-full top-1/2 bg-neutral disabled:opacity-50"
           aria-label="Next"
           type="button"
           aria-disabled={!nextAble}

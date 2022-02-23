@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function History({ items }) {
   return (
-    <div className=" bg-base-200">
+    <div className=" bg-base-300">
       <div className="container flex flex-col lg:flex-row lg:gap-0">
         <div className="relative aspect-square overflow-hidden sm:aspect-[3/2] md:aspect-[4/2] lg:flex-1  lg:overflow-visible">
           <div className="absolute inset-0 grid items-center w-full grid-cols-2 gap-2 sm:grid-cols-3 md:relative md:grid-cols-4 lg:w-full lg:max-w-none lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
