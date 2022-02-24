@@ -30,7 +30,7 @@
   --border-color: var(--b3);
   --rounded-box: 1rem;
   --rounded-btn: 0rem;
-  --rounded-badge: 1.9rem;
+  --rounded-badge: 0.25rem;
   --animation-btn: 0.25s;
   --animation-input: 0.2s;
   --btn-text-case: uppercase;
@@ -253,21 +253,5 @@ body {
     border: 3px solid;
     border-color: theme('colors.neutral-content')
       theme('colors.neutral-content') transparent transparent;
-  }
-  .btn-outline {
-    --tw-text-opacity: 0.8;
-    --tw-border-opacity: 0.2;
-    --tw-bg-opacity: 0;
-    background-color: transparent;
-    border-color: hsla(var(--bc) / var(--tw-border-opacity, 1));
-    color: hsla(var(--bc) / var(--tw-text-opacity, 1));
-    background-color: hsla(var(--bc) / var(--tw-bg-opacity, 1));
-  }
-  .btn-outline:hover {
-    --tw-text-opacity: 1;
-    --tw-bg-opacity: 0.1;
-    --tw-border-opacity: 0.3;
-    color: hsla(var(--bc) / var(--tw-text-opacity, 1));
-    background-color: hsla(var(--bc) / var(--tw-bg-opacity, 1));
   }
 }

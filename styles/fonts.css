@@ -8,13 +8,13 @@
 }
 
 /* Gunplay */
-/* @font-face {
-    font-family: 'gunplay_rg';
-    src: url('../assets/gunplay/gunplay_rg-webfont.woff2') format('woff2'),
-      url('../assets/gunplay/gunplay_rg-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  } */
+@font-face {
+  font-family: 'gunplay_rg';
+  src: url('../assets/fonts/gunplay_rg-webfont.woff2') format('woff2'),
+    url('../assets/fonts/gunplay_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Sofia Pro Soft Medium */
 @font-face {

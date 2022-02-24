@@ -309,7 +309,7 @@ export default function AllComponents() {
                   </div>
                 </div>
               </div>
-              <div className="absolute z-20 text-xl pointer-events-none icon h2 -bottom-4 -right-4 text-neutral-content">
+              <div className="absolute z-20 text-xl pointer-events-none icon h2 -bottom-4 -right-4 text-base-content">
                 <svg
                   stroke="currentColor"
                   fill="currentColor"

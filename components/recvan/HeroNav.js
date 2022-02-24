@@ -174,7 +174,7 @@ const Header = ({ navItems, transparent }) => {
               </div>
               <span className="md:hidden">Favorites</span>
               <span
-                className="badge badge-sm badge-outline absolute -top-2  -right-2 !border-neutral-content !border-opacity-50 !bg-neutral !bg-opacity-[var(--header-bg-opacity)] text-neutral-content group-hover:!bg-opacity-100 group-hover:text-neutral-content md:top-0"
+                className="badge badge-sm badge-outline absolute -top-2 -right-2  rounded-full !border-neutral-content !border-opacity-50 !bg-neutral !bg-opacity-[var(--header-bg-opacity)] text-neutral-content group-hover:!bg-opacity-100 group-hover:text-neutral-content md:top-0"
                 id="numFavorited"
               >
                 0

@@ -28,6 +28,7 @@ module.exports = {
           'sans-serif',
         ],
         heading: ['good_times_rg', 'monospace'],
+        number: ['"gunplay_rg"', 'monospace'],
       },
     },
   },

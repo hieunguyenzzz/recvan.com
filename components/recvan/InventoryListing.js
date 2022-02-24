@@ -170,9 +170,9 @@ const ProductCard = () => {
           <ImageLabel>Used</ImageLabel>
           <button
             type="button"
-            className="absolute z-10 btn-outline btn btn-sm btn-circle top-1 right-1 bg-base-100 bg-opacity-60 hover:bg-base-100 hover:bg-opacity-90"
+            className="absolute z-10 btn btn-ghost btn-sm btn-circle top-1 right-1 bg-base-200 bg-opacity-30 hover:bg-base-100"
           >
-            <div tabIndex={'-1'} className="icon h2 focus:">
+            <div tabIndex={'-1'} className="icon h2">
               <svg
                 stroke="currentColor"
                 fill="none"
@@ -198,7 +198,7 @@ const ProductCard = () => {
             <h6>2019 Winnebago</h6>
             <h6>OUTLOOK 27D</h6>
           </div>
-          <p className="mt-2 text-sm opacity-70">
+          <p className="mt-3 text-sm opacity-70">
             <span className="">List Price </span>
             <span
               className="line-through"
@@ -207,7 +207,7 @@ const ProductCard = () => {
               $79,998
             </span>
           </p>
-          <p className="mt-1">
+          <p className="">
             <span>Sale Price </span> $69,998
           </p>
         </div>
@@ -329,7 +329,7 @@ export default function InventoryListing() {
                 <line x1={17} y1={16} x2={23} y2={16} />
               </svg>
             </div>
-            <span className="group-a-hover:border-base-content badge absolute -top-[20%] -right-[20%] text-base-content empty:hidden">
+            <span className="group-a-hover:border-base-content badge absolute -top-[20%] -right-[20%] rounded-full text-base-content empty:hidden">
               1
             </span>
           </label>
