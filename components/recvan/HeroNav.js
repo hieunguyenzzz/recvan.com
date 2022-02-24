@@ -198,7 +198,7 @@ const Hero = () => {
       ></div>
       <div className="absolute inset-0 z-[-1] h-full w-full bg-[#272727] opacity-[0.58] bg-blend-hard-light"></div>
       <div className="absolute inset-0 z-[-1] h-full w-full bg-[#C0B9A8] opacity-[0.16] bg-blend-screen"></div>
-      <div className=" mx-auto flex max-w-[20rem] flex-col items-start  py-12 md:max-w-[44.25rem] md:flex-row  xl:max-w-[60rem] ">
+      <div className=" mx-auto flex max-w-[20rem] flex-col items-start  py-12 md:max-w-[44.25rem] md:flex-row  lg:max-w-[60rem] ">
         <div className="max-w-lg space-y-2  text-white md:flex-1 md:pr-7 md:text-right md:text-[1.125rem] xl:text-[1.125rem] 2xl:text-lg">
           <h1
             className="truncate  text-[2.0625em] leading-none xl:text-[2.5em]"
@@ -301,6 +301,108 @@ const Hero = () => {
               unsubscribe at any time.
             </p>
           </form>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 hidden w-full md:block">
+        <div class="mx-auto flex max-w-[20rem] flex-col items-start border-t border-t-neutral-content border-opacity-50 md:max-w-[44.25rem] md:flex-row  lg:max-w-[60rem]">
+          <ul className="flex h-[120px] w-full items-start text-sm lg:text-base ">
+            <li className="group flex h-full flex-1 justify-center border-current bg-opacity-0 text-center  transition-all duration-300 ease-out hover:border-t-[4px] hover:bg-[rgba(39,39,39,0.38)] hover:text-base-100">
+              <a
+                href="#dedicatedToExcellence"
+                className=" relative flex h-[80px] w-full items-center justify-center transition-all duration-300 ease-out group-hover:h-full "
+              >
+                <div className="icon absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line x1={12} y1={5} x2={12} y2={19} />
+                    <polyline points="19 12 12 19 5 12" />
+                  </svg>
+                </div>
+                Dedicated to Excellence
+              </a>
+            </li>
+            <li className="group flex h-full flex-1 justify-center border-current bg-opacity-0 text-center  transition-all duration-300 ease-out hover:border-t-[4px] hover:bg-[rgba(39,39,39,0.38)] hover:text-base-100">
+              <a
+                href="#dedicatedToExcellence"
+                className=" relative flex h-[80px] w-full items-center justify-center transition-all duration-300 ease-out group-hover:h-full "
+              >
+                <div className="icon absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line x1={12} y1={5} x2={12} y2={19} />
+                    <polyline points="19 12 12 19 5 12" />
+                  </svg>
+                </div>
+                Adventurers Wanted
+              </a>
+            </li>
+            <li className="group flex h-full flex-1 justify-center border-current bg-opacity-0 text-center  transition-all duration-300 ease-out hover:border-t-[4px] hover:bg-[rgba(39,39,39,0.38)] hover:text-base-100">
+              <a
+                href="#dedicatedToExcellence"
+                className=" relative flex h-[80px] w-full items-center justify-center transition-all duration-300 ease-out group-hover:h-full "
+              >
+                <div className="icon absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line x1={12} y1={5} x2={12} y2={19} />
+                    <polyline points="19 12 12 19 5 12" />
+                  </svg>
+                </div>
+                Brands You Trust
+              </a>
+            </li>
+            <li className="group flex h-full flex-1 justify-center border-current bg-opacity-0 text-center  transition-all duration-300 ease-out hover:border-t-[4px] hover:bg-[rgba(39,39,39,0.38)] hover:text-base-100">
+              <a
+                href="#dedicatedToExcellence"
+                className=" relative flex h-[80px] w-full items-center justify-center transition-all duration-300 ease-out group-hover:h-full "
+              >
+                <div className="icon absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line x1={12} y1={5} x2={12} y2={19} />
+                    <polyline points="19 12 12 19 5 12" />
+                  </svg>
+                </div>
+                A History of Connection
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
