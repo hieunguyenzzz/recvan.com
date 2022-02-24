@@ -7,7 +7,7 @@ export default function RecvanBlog() {
       <h2 className="mb-[1em] mt-[1.2em] text-center text-4xl leading-relaxed md:text-[min(4vw,44px)]">
         Rec Van Blog
       </h2>
-      <div className="grid grid-cols-1 gap-7 gap-y-12 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-7 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="">
           <div className="h-full bg-white rounded-lg card">
             <figure className="h-[220px] w-full">
