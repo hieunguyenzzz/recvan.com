@@ -5,23 +5,25 @@ export default function History({ items }) {
   return (
     <div className=" bg-base-300">
       <div className="container flex flex-col lg:flex-row lg:gap-0">
-        <div className="relative aspect-square overflow-hidden sm:aspect-[3/2] md:aspect-[4/2] lg:flex-1  lg:overflow-visible">
-          <div className="absolute inset-0 grid items-center w-full grid-cols-2 gap-2 sm:grid-cols-3 md:relative md:grid-cols-4 lg:w-full lg:max-w-none lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-            {new Array(24)
-              .fill((index) => (
-                <Image
-                  key={index}
-                  className="photo-grid__img"
-                  src={`https://recvan.com/content/images/connection/thumb${
-                    index + 1
-                  }.jpg`}
-                ></Image>
-              ))
-              .map((render, index) => render(index))}
+        <div className="relative aspect-square overflow-hidden sm:aspect-[3/2] md:aspect-[4/2]  lg:flex-1  lg:overflow-visible">
+          <div className="flex items-center overflow-hidden lg:h-[calc(100vh-var(--header-height))]">
+            <div className="absolute inset-0 grid items-center w-full grid-cols-2 gap-2 sm:grid-cols-3 md:relative md:grid-cols-4 lg:w-full lg:max-w-none lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+              {new Array(24)
+                .fill((index) => (
+                  <Image
+                    key={index}
+                    className="photo-grid__img"
+                    src={`https://recvan.com/content/images/connection/thumb${
+                      index + 1
+                    }.jpg`}
+                  ></Image>
+                ))
+                .map((render, index) => render(index))}
+            </div>
           </div>
         </div>
 
-        <div className="flex items-center py-12 px-container-offset lg:sticky lg:top-0 lg:h-[calc(100vh-var(--header-height))] lg:flex-1">
+        <div className="mx-auto flex items-center py-12 px-container-offset lg:sticky lg:top-0 lg:h-[calc(100vh-var(--header-height))] lg:flex-1">
           <div className="flex flex-col w-full max-w-xs mx-auto text-black md:max-w-md ">
             <div className="flex justify-center gap-3">
               <Image
