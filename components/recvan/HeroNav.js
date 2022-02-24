@@ -65,7 +65,7 @@ const Header = ({ navItems, transparent }) => {
       </div>
       <nav className="w-full md:flex-1 md:pl-container-offset">
         <input className="peer" hidden id="header-menu" type="checkbox"></input>
-        <div className="flex max-h-0 flex-col overflow-hidden transition-all duration-500 ease-in-out peer-checked:h-auto   peer-checked:max-h-[calc(100vh-var(--header-height))] md:h-auto md:max-h-header md:flex-row md:items-center 2xl:justify-end">
+        <div className="flex max-h-0 flex-col overflow-hidden transition-all duration-500 ease-in-out peer-checked:h-auto   peer-checked:max-h-[calc(100vh-var(--header-height))] md:h-auto md:max-h-header md:flex-row md:items-center xl:justify-end">
           <form
             name="quickSearch"
             action="/RecVanSearch"
@@ -77,7 +77,7 @@ const Header = ({ navItems, transparent }) => {
               <input
                 type="text"
                 placeholder="Quick Search..."
-                className="input-bordered input h-10 w-0 min-w-[160px] flex-1 !rounded-full border-neutral-content !border-opacity-50 bg-transparent transition-all transition placeholder:text-neutral-content placeholder:text-opacity-50 focus:min-w-[200px]"
+                className="input-bordered input h-10 w-0 min-w-[160px] flex-1 !rounded-full border-neutral-content !border-opacity-50 bg-transparent transition-all  placeholder:text-neutral-content placeholder:text-opacity-50 focus:min-w-[200px]"
               />
               <button className="absolute top-0 right-0 w-10 h-10 min-h-0 minh btn btn-ghost btn-circle">
                 <div className="text-xl icon h2">
@@ -96,7 +96,7 @@ const Header = ({ navItems, transparent }) => {
               </button>
             </div>
           </form>
-          <ul className="flex flex-col order-1 w-full text-sm uppercase truncate divide-y divide-neutral-content divide-opacity-30 border-y border-neutral-content border-opacity-30 md:flex-row md:items-center md:divide-none md:border-y-0 2xl:absolute 2xl:left-1/2 2xl:w-auto 2xl:-translate-x-1/2">
+          <ul className="flex flex-col order-1 w-full text-sm uppercase truncate divide-y divide-neutral-content divide-opacity-30 border-y border-neutral-content border-opacity-30 md:flex-row md:items-center md:divide-none md:border-y-0 xl:absolute xl:left-1/2 xl:w-auto xl:-translate-x-1/2">
             {navItems.map(({ title, href, active }, i) => {
               if (active) {
                 return (
