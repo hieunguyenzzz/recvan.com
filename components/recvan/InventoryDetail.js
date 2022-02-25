@@ -191,7 +191,7 @@ export default function InventoryDetail() {
               </div>
               <div className="collapse-content ">
                 <div className="px-3 pt-2">
-                  <Image src="https://lmrvimages.azureedge.net/wp163572/14-main.jpg" />
+                  <img src="https://lmrvimages.azureedge.net/wp163572/14-main.jpg" />
                 </div>
               </div>
             </div>

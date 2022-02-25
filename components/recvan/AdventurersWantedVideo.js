@@ -50,7 +50,7 @@ export default function AdventurersWantedVideo() {
             opacity: percent / 100,
             clipPath: `inset(${145 - (145 * percent) / 100}px)`,
           }}
-          className="relative top-0 right-0 w-full "
+          className="relative top-0 right-0 w-full transition-all will-change-scroll"
         >
           <iframe
             className="absolute w-full h-full pointer-events-none"
