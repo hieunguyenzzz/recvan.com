@@ -34,7 +34,7 @@
   --animation-btn: 0.25s;
   --animation-input: 0.2s;
   --btn-text-case: uppercase;
-  --btn-focus-scale: 0.95;
+  --btn-focus-scale: 1;
   --navbar-padding: 0.5rem;
   --border-btn: 1px;
   --tab-border: 1px;
@@ -205,6 +205,7 @@
     border-color: hsla(var(--nc) / 0.5);
     border-width: 1px;
   }
+
   .input:focus,
   .textarea:focus,
   .select:focus {
@@ -241,6 +242,9 @@
     border: 3px solid;
     border-color: theme('colors.neutral-content')
       theme('colors.neutral-content') transparent transparent;
+  }
+  .btn {
+    @apply focusable no-animation whitespace-nowrap;
   }
 }
 

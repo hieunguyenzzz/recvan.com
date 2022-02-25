@@ -41,13 +41,15 @@ export default function Brands({ items }) {
                   src={src}
                   alt={title}
                 />
-                <Button
-                  color={'primary'}
-                  shape="block"
-                  className="no-animation absolute -bottom-4 left-1/2 flex h-12 w-[240px] -translate-x-1/2 items-center justify-center opacity-0 focus:bg-primary-focus group-hover:opacity-100"
-                >
-                  shop brand
-                </Button>
+                <div className="absolute flex items-center justify-center -translate-x-1/2 -bottom-4 left-1/2">
+                  <Button
+                    color={'primary'}
+                    shape="block"
+                    className="no-animation h-12 w-[240px]   opacity-0 focus:bg-primary-focus group-hover:opacity-100"
+                  >
+                    shop brand
+                  </Button>
+                </div>
               </a>
             )
           })}

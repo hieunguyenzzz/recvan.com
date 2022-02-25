@@ -196,9 +196,13 @@ const ProductCard = () => {
             {(btnProps) => <a {...btnProps}>Email Me Info</a>}
           </Button>
         </div>
-        <a className="btn btn-primary btn-block btn-sm" role="button">
-          View Vehicle Details
-        </a>
+        <Button color={'primary'} variant={'outline'} size="sm" shape="block">
+          {(btnProps) => (
+            <a href="#" {...btnProps} role="button">
+              View Vehicle Details
+            </a>
+          )}
+        </Button>
       </div>
     </div>
   )

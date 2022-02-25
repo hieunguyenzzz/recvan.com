@@ -27,7 +27,7 @@ export default function RecvanBlog() {
                 tasty modern American ...
               </p>
               <a
-                href="https://myrecvan.com/2021/10/get-cookin-rv-style-fill-your-van-with-the-scent-of-baked-apples-and-berries-this-fall/"
+                href="#https://myrecvan.com/2021/10/get-cookin-rv-style-fill-your-van-with-the-scent-of-baked-apples-and-berries-this-fall/"
                 className="btn btn-primary link btn-block btn-sm !h-[28px] !min-h-[28px] bg-opacity-70"
               >
                 Read More
@@ -53,7 +53,7 @@ export default function RecvanBlog() {
                 breakfast rotation....
               </p>
               <a
-                href="https://myrecvan.com/2021/09/the-best-van-life-breakfast-pancakes-8-ways/"
+                href="#https://myrecvan.com/2021/09/the-best-van-life-breakfast-pancakes-8-ways/"
                 className="btn btn-primary link btn-block btn-sm !h-[28px] !min-h-[28px] bg-opacity-70"
               >
                 Read More
@@ -64,7 +64,7 @@ export default function RecvanBlog() {
         <div className="">
           <div className="h-full bg-white rounded-lg card">
             <figure className="h-[220px] w-full overflow-hidden ">
-              <a href="https://myrecvan.com/2021/09/10-ways-for-van-lifers-to-welcome-fall/">
+              <a href="#https://myrecvan.com/2021/09/10-ways-for-van-lifers-to-welcome-fall/">
                 <Image
                   ratio={1}
                   src="https://secureservercdn.net/166.62.112.107/hkc.b8a.myftpupload.com/wp-content/uploads/2021/09/@storytelleroverland_1-1.jpg?time=1644965638"
@@ -82,7 +82,7 @@ export default function RecvanBlog() {
                 seasonal splendor. Take your n...
               </p>
               <a
-                href="https://myrecvan.com/2021/09/10-ways-for-van-lifers-to-welcome-fall/"
+                href="#https://myrecvan.com/2021/09/10-ways-for-van-lifers-to-welcome-fall/"
                 className="btn btn-primary link btn-block btn-sm !h-[28px] !min-h-[28px] bg-opacity-70"
               >
                 Read More
@@ -94,7 +94,7 @@ export default function RecvanBlog() {
           <div className="h-full bg-white rounded-lg card">
             <a
               className="h-[220px] w-full overflow-hidden "
-              href="https://myrecvan.com/2021/09/why-your-van-needs-a-fall-cleaning/"
+              href="#https://myrecvan.com/2021/09/why-your-van-needs-a-fall-cleaning/"
             >
               <Image
                 ratio={1}
@@ -112,7 +112,7 @@ export default function RecvanBlog() {
                 seasonal clothes in ...
               </p>
               <a
-                href="https://myrecvan.com/2021/09/why-your-van-needs-a-fall-cleaning/"
+                href="#https://myrecvan.com/2021/09/why-your-van-needs-a-fall-cleaning/"
                 className="btn btn-primary link btn-block btn-sm !h-[28px] !min-h-[28px] bg-opacity-70"
               >
                 Read More

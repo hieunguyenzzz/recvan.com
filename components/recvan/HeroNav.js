@@ -1,4 +1,5 @@
 import Button from '@components/UI/Button'
+import Image from '@components/UI/Image'
 import React, { useEffect, useRef, useState } from 'react'
 import Icon from './common/Icons'
 import Logo from './common/Logo'
@@ -152,16 +153,16 @@ const Header = ({ navItems, transparent }) => {
 const Hero = () => {
   return (
     <div className="relative isolate flex w-full items-center bg-cover pt-header text-neutral-content bg-blend-soft-light md:h-[600px] md:min-h-screen md:pb-[120px]">
-      <div
-        style={{
-          backgroundImage:
-            'url("https://recvan.com/Content/images/home/hero-1.jpg")',
-        }}
-        className="absolute inset-0 z-[-1] h-full w-full bg-cover "
-      ></div>
-      <div className="absolute inset-0 z-[-1] h-full w-full bg-[#272727] opacity-[0.58] bg-blend-hard-light"></div>
-      <div className="absolute inset-0 z-[-1] h-full w-full bg-[#C0B9A8] opacity-[0.16] bg-blend-screen"></div>
-      <div className=" mx-auto flex max-w-[20rem] flex-col items-start  py-12 md:max-w-[44.25rem] md:flex-row  lg:max-w-[60rem] ">
+      <div className="absolute inset-0 isolate z-[-1] h-full w-full">
+        <Image
+          className={'z-[-1]'}
+          src="https://recvan.com/Content/images/home/hero-1.jpg"
+        />
+        <div className="absolute inset-0  h-full w-full bg-[#272727] opacity-[0.58] bg-blend-hard-light"></div>
+        <div className="absolute inset-0  h-full w-full bg-[#C0B9A8] opacity-[0.16] bg-blend-screen"></div>
+      </div>
+
+      <div className=" isolate mx-auto flex max-w-[20rem] flex-col items-start  py-12 md:max-w-[44.25rem] md:flex-row  lg:max-w-[60rem] ">
         <div className="max-w-lg space-y-2  text-white md:flex-1 md:pr-7 md:text-right md:text-[1.125rem] xl:text-[1.125rem] 2xl:text-lg">
           <h1
             className="truncate  text-[2.0625em] leading-none xl:text-[2.5em]"
@@ -191,6 +192,10 @@ const Hero = () => {
           className="pt-4 md:border-l  md:border-l-neutral-content md:border-opacity-50 md:pt-[0.3125rem] md:pl-7 xl:max-w-sm"
         >
           <form
+            onSubmit={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+            }}
             action="/RecVanHome/HomeEmail"
             method="post"
             cr-attached="true"
