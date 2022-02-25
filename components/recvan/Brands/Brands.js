@@ -1,3 +1,4 @@
+import Button from '@components/UI/Button'
 import Image from '@components/UI/Image'
 import React from 'react'
 
@@ -32,16 +33,21 @@ export default function Brands({ items }) {
               <a
                 key={i}
                 href={href}
-                className="relative mb-4 border-2 border-transparent group hover:border-primary"
+                className="group relative mb-4  w-[294px] border-2 border-transparent hover:border-primary lg:w-[320px]"
               >
                 <Image
-                  className="h-[185px] w-[294px] object-cover opacity-50 saturate-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:saturate-100"
+                  ratio={204 / 320}
+                  className="transition-opacity duration-700 opacity-50 saturate-0 group-hover:opacity-100 group-hover:saturate-100"
                   src={src}
                   alt={title}
                 />
-                <button className="no-animation absolute -bottom-4 left-1/2 flex h-12 w-[240px] -translate-x-1/2 items-center justify-center bg-primary uppercase text-white opacity-0 focus:bg-primary-focus group-hover:opacity-100">
+                <Button
+                  color={'primary'}
+                  shape="block"
+                  className="no-animation absolute -bottom-4 left-1/2 flex h-12 w-[240px] -translate-x-1/2 items-center justify-center opacity-0 focus:bg-primary-focus group-hover:opacity-100"
+                >
                   shop brand
-                </button>
+                </Button>
               </a>
             )
           })}

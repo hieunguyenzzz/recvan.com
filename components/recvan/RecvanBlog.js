@@ -66,6 +66,7 @@ export default function RecvanBlog() {
             <figure className="h-[220px] w-full overflow-hidden ">
               <a href="https://myrecvan.com/2021/09/10-ways-for-van-lifers-to-welcome-fall/">
                 <Image
+                  ratio={1}
                   src="https://secureservercdn.net/166.62.112.107/hkc.b8a.myftpupload.com/wp-content/uploads/2021/09/@storytelleroverland_1-1.jpg?time=1644965638"
                   className="object-cover w-full h-full"
                 />
@@ -96,6 +97,7 @@ export default function RecvanBlog() {
               href="https://myrecvan.com/2021/09/why-your-van-needs-a-fall-cleaning/"
             >
               <Image
+                ratio={1}
                 src="https://secureservercdn.net/166.62.112.107/hkc.b8a.myftpupload.com/wp-content/uploads/2021/09/@van.there_.jpg?time=1644965638"
                 className="object-cover w-full h-full"
               />

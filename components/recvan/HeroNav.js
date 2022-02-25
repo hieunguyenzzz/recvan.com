@@ -48,12 +48,17 @@ const Header = ({ navItems, transparent }) => {
         <div className="h-header w-[81px] lg:w-[100px]">
           <Logo />
         </div>
-        <label
-          htmlFor="header-menu"
-          className="btn-outline btn btn-ghost btn-square btn-sm !h-[40px] w-[56px] rounded border-neutral-content border-opacity-60 text-3xl text-neutral-content text-opacity-70 md:hidden"
+        <Button
+          className=" !h-[40px] w-[56px] rounded border-neutral-content border-opacity-60 text-3xl text-neutral-content text-opacity-70 md:hidden"
+          variant={'outline'}
+          size="sm"
         >
-          <Icon className={'text-3xl'} id="menu" />
-        </label>
+          {(props) => (
+            <label htmlFor="header-menu" {...props}>
+              <Icon className={'text-3xl'} id="menu" />
+            </label>
+          )}
+        </Button>
       </div>
       <nav className="w-full md:flex-1 md:pl-container-offset">
         <input className="peer" hidden id="header-menu" type="checkbox"></input>
@@ -132,7 +137,7 @@ const Header = ({ navItems, transparent }) => {
               <Icon className="text-xl" id="heart"></Icon>
               <span className="md:hidden">Favorites</span>
               <span
-                className="badge badge-sm badge-outline absolute -top-2 -right-2  rounded-full !border-neutral-content !border-opacity-50 !bg-neutral !bg-opacity-[var(--header-bg-opacity)] text-neutral-content group-hover:!bg-opacity-100 group-hover:text-neutral-content md:top-0"
+                className="badge badge-sm badge-outline absolute -top-2 -right-2  rounded-full !border-neutral-content !border-opacity-50 !bg-neutral bg-opacity-100 text-neutral-content group-hover:!bg-opacity-100 group-hover:text-neutral-content md:top-0 md:!bg-opacity-[var(--header-bg-opacity)]"
                 id="numFavorited"
               >
                 0
@@ -234,10 +239,14 @@ const Hero = () => {
                 type="text"
               />
             </div>
-            <button className="col-span-2 gap-2 uppercase btn btn-primary btn-block">
+            <Button
+              color={'primary'}
+              shape="block"
+              className="col-span-2 gap-2 uppercase "
+            >
               Shop Now
               <Icon className="text-lg " id="arrow-right"></Icon>
-            </button>
+            </Button>
             <p className="col-span-2 text-xs hint-text font-body text-neutral-content text-opacity-70">
               We will never share your contact information and you can
               unsubscribe at any time.

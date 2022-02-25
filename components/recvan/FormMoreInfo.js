@@ -1,3 +1,4 @@
+import Button from '@components/UI/Button'
 import FormControl from '@components/UI/Form/FormControl'
 import React from 'react'
 
@@ -116,11 +117,11 @@ export default function FormMoreInfo() {
               </div>
             </div>
             <div className="col-span-full">
-              <input
-                type="submit"
-                className=" btn btn-primary"
-                defaultValue="Submit"
-              />
+              <Button shape={'wide'} color="primary">
+                {(props) => (
+                  <input type="submit" defaultValue="Submit" {...props} />
+                )}
+              </Button>
             </div>
           </form>
         </div>

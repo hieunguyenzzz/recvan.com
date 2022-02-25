@@ -16,7 +16,7 @@ export default function Button({
   const btnProps = {
     disabled,
     className: classNames(
-      'btn',
+      'btn whitespace-nowrap',
       size && {
         'btn-lg': size === 'lg',
         'btn-md': size === 'md',

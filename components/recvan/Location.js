@@ -13,17 +13,21 @@ export default function Location() {
           Reyes National Seashore, Yosemite National Park, the redwood coast and
           beyond!
         </p>
-        <iframe
-          className="w-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.2180272146334!2d-121.9666574491539!3d37.50277557971073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc713df25b02d%3A0xde63a6444964c7e!2s5070%20Brandin%20Ct%2C%20Fremont%2C%20CA%2094538!5e0!3m2!1sen!2sus!4v1611877232976!5m2!1sen!2sus"
-          width={600}
-          height={450}
-          frameBorder={0}
-          style={{ border: 0 }}
-          allowFullScreen
-          aria-hidden="false"
-          tabIndex={0}
-        />
+        <div className="relative">
+          <iframe
+            className="w-full "
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.2180272146334!2d-121.9666574491539!3d37.50277557971073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc713df25b02d%3A0xde63a6444964c7e!2s5070%20Brandin%20Ct%2C%20Fremont%2C%20CA%2094538!5e0!3m2!1sen!2sus!4v1611877232976!5m2!1sen!2sus"
+            width={600}
+            height={450}
+            frameBorder={0}
+            style={{ border: 0 }}
+            allowFullScreen
+            aria-hidden="false"
+            tabIndex={0}
+          />
+          <div className="absolute inset-0 border shadow-inner pointer-events-none"></div>
+        </div>
+
         <div className="flex flex-wrap gap-x-6">
           <div className="flex-1 w-full md:w-auto">
             <h4>Sales</h4>

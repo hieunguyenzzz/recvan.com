@@ -1,3 +1,4 @@
+import Button from '@components/UI/Button'
 import Image from '@components/UI/Image'
 import React from 'react'
 
@@ -12,7 +13,7 @@ export default function History({ items }) {
                 .fill((index) => (
                   <Image
                     key={index}
-                    className="photo-grid__img"
+                    ratio={1}
                     src={`https://recvan.com/content/images/connection/thumb${
                       index + 1
                     }.jpg`}
@@ -25,12 +26,14 @@ export default function History({ items }) {
 
         <div className="mx-auto flex items-center py-12 px-container-offset lg:sticky lg:top-0 lg:h-[calc(100vh-var(--header-height))] lg:flex-1">
           <div className="flex flex-col w-full max-w-xs mx-auto text-black md:max-w-md ">
-            <div className="flex justify-center gap-3">
+            <div className="flex justify-center gap-3 my-7">
               <Image
+                ratio={62 / 56}
                 src="https://recvan.com/Content/images/icon-camping-chair.png"
-                className="self-center my-7 w-14"
+                className="self-center w-14"
               />
               <Image
+                ratio={62 / 56}
                 src="https://recvan.com/Content/images/icon-camping-chair.png"
                 className="my-7 w-14 scale-x-[-1] self-center"
               />
@@ -47,13 +50,13 @@ export default function History({ items }) {
               years helping people discover their adventure.
             </p>
             <p className="mt-4">
-              <a
-                className="w-full btn btn-secondary md:w-auto"
-                href="RecVanSearch"
-                role="button"
-              >
-                Learn more
-              </a>
+              <Button className="w-full md:w-auto" color="secondary">
+                {(props) => (
+                  <a {...props} href="RecVanSearch">
+                    Learn more
+                  </a>
+                )}
+              </Button>
             </p>
           </div>
         </div>

@@ -96,7 +96,7 @@ export const templateRoutes = [
     'form-sell',
     [
       ['hero-nav', HeroNav, { ...HeroNavProps, transparent: false }],
-      ['page-content', PageContent, PageContentProps],
+      ['form-sell', FormSell, FormSellProps],
       ['footer', Footer, FooterProps],
     ],
   ],

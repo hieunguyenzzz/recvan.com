@@ -1,3 +1,4 @@
+import Button from '@components/UI/Button'
 import Carousel from '@components/UI/Carousel'
 import Image from '@components/UI/Image'
 import classNames from 'classnames'
@@ -62,12 +63,15 @@ export default function InventoryDetail() {
               Phoenix, AZ
             </a>
             <div className="flex-1" />
-            <button
+            <Button
               type="button"
-              className="z-10 w-8 h-8 min-h-0 btn-outline btn btn-sm btn-circle"
+              variant={'outline'}
+              shape="circle"
+              size={'sm'}
+              className="z-10 w-8 h-8 min-h-0 "
             >
               <Icon tabIndex={'-1'} id="heart"></Icon>
-            </button>
+            </Button>
           </div>
           <div className="flex gap-2 mt-5">
             <div className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
