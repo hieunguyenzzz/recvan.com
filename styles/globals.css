@@ -205,17 +205,20 @@
     border-color: hsla(var(--nc) / 0.5);
     border-width: 1px;
   }
-
-  .input:focus,
-  .textarea:focus,
-  .select:focus {
-    border-color: hsla(var(--nc) / 1);
-    box-shadow: 0 0 0 2px hsl(var(--nc) / 0.2), 0 0 0 4px hsla(var(--nc) / 0.2);
-  }
   .focusable:focus {
     border-color: hsla(var(--nc) / 1);
     box-shadow: 0 0 0 2px hsl(var(--nc) / 0.2), 0 0 0 4px hsla(var(--nc) / 0.2);
   }
+  .focusable:focus:active {
+    border-color: hsla(var(--nc) / 1);
+    box-shadow: 0 0 0 1px hsl(var(--nc) / 0.6);
+  }
+  .input:focus,
+  .textarea:focus,
+  .select:focus {
+    @apply focusable;
+  }
+
   .image-label {
     position: absolute;
     top: 7px;
