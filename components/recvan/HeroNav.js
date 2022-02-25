@@ -131,7 +131,7 @@ const Header = ({ navItems, transparent }) => {
             </Button>
             <Button
               variant={'outline'}
-              className="relative flex-1 min-h-0 gap-2 group flex-nowrap border-neutral-content text-neutral-content hover:bg-neutral md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full lg:w-auto"
+              className="relative flex-1 min-h-0 gap-2 group flex-nowrap border-neutral-content text-neutral-content hover:bg-neutral md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full "
               type="button"
             >
               <Icon className="text-xl" id="heart"></Icon>
