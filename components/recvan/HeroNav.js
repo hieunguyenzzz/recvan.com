@@ -1,4 +1,6 @@
+import Button from '@components/UI/Button'
 import React, { useEffect, useRef, useState } from 'react'
+import Icon from './common/Icons'
 import Logo from './common/Logo'
 const Header = ({ navItems, transparent }) => {
   const trackerRef = useRef()
@@ -50,17 +52,7 @@ const Header = ({ navItems, transparent }) => {
           htmlFor="header-menu"
           className="btn-outline btn btn-ghost btn-square btn-sm !h-[40px] w-[56px] rounded border-neutral-content border-opacity-60 text-3xl text-neutral-content text-opacity-70 md:hidden"
         >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth={0}
-            viewBox="0 0 1024 1024"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z" />
-          </svg>
+          <Icon className={'text-3xl'} id="menu" />
         </label>
       </div>
       <nav className="w-full md:flex-1 md:pl-container-offset">
@@ -70,7 +62,7 @@ const Header = ({ navItems, transparent }) => {
             name="quickSearch"
             action="/RecVanSearch"
             data-id="keyword"
-            className="my-2 rounded-full quick-search-rvs form-inline my-md-0 px-container-offset md:order-2 md:px-0"
+            className="my-2 rounded-full form-inline my-md-0 px-container-offset md:order-2 md:px-0"
             cr-attached="true"
           >
             <div className="relative flex w-full ">
@@ -79,21 +71,13 @@ const Header = ({ navItems, transparent }) => {
                 placeholder="Quick Search..."
                 className="input-bordered input h-10 w-0 min-w-[160px] flex-1 !rounded-full border-neutral-content !border-opacity-50 bg-transparent transition-all  placeholder:text-neutral-content placeholder:text-opacity-50 focus:min-w-[200px]"
               />
-              <button className="absolute top-0 right-0 w-10 h-10 min-h-0 minh btn btn-ghost btn-circle">
-                <div className="text-xl icon h2">
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth={0}
-                    viewBox="0 0 512 512"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M337.509 305.372h-17.501l-6.571-5.486c20.791-25.232 33.922-57.054 33.922-93.257C347.358 127.632 283.896 64 205.135 64 127.452 64 64 127.632 64 206.629s63.452 142.628 142.225 142.628c35.011 0 67.831-13.167 92.991-34.008l6.561 5.487v17.551L415.18 448 448 415.086 337.509 305.372zm-131.284 0c-54.702 0-98.463-43.887-98.463-98.743 0-54.858 43.761-98.742 98.463-98.742 54.7 0 98.462 43.884 98.462 98.742 0 54.856-43.762 98.743-98.462 98.743z" />
-                  </svg>
-                </div>
-              </button>
+              <Button
+                className="absolute top-0 right-0 w-10 h-10 min-h-0 "
+                variant={'ghost'}
+                shape="circle"
+              >
+                <Icon className="text-xl" id="search"></Icon>
+              </Button>
             </div>
           </form>
           <ul className="flex flex-col order-1 w-full text-sm uppercase truncate divide-y divide-neutral-content divide-opacity-30 border-y border-neutral-content border-opacity-30 md:flex-row md:items-center md:divide-none md:border-y-0 xl:absolute xl:left-1/2 xl:w-auto xl:-translate-x-1/2">
@@ -129,49 +113,23 @@ const Header = ({ navItems, transparent }) => {
             })}
           </ul>
           <div className="flex order-1 gap-2 py-3 px-container-offset md:order-3 md:w-auto">
-            <a
-              className="flex-1 min-h-0 gap-2 truncate btn-outline btn flex-nowrap md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full lg:w-auto"
-              href="tel:833-475-1658"
+            <Button
+              variant={'outline'}
+              className="flex-1 min-h-0 gap-2 flex-nowrap border-neutral-content text-neutral-content hover:bg-neutral md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full lg:w-auto"
             >
-              <div className="text-xl icon h2">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth={0}
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-              </div>
-
-              <span className="md:hidden lg:block">833-475-1658</span>
-            </a>
-            <button
-              className="relative flex-1 min-h-0 gap-2 group btn-outline btn md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full"
+              {(props) => (
+                <a href="tel:833-475-1658" {...props}>
+                  <Icon className="text-xl" id="phone"></Icon>
+                  <span className="md:hidden lg:block">833-475-1658</span>
+                </a>
+              )}
+            </Button>
+            <Button
+              variant={'outline'}
+              className="relative flex-1 min-h-0 gap-2 group flex-nowrap border-neutral-content text-neutral-content hover:bg-neutral md:btn-ghost md:h-10 md:w-10 md:flex-auto md:rounded-full lg:w-auto"
               type="button"
             >
-              <div className="text-xl icon h2">
-                <svg
-                  stroke="currentColor"
-                  fill="none"
-                  strokeWidth={0}
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </div>
+              <Icon className="text-xl" id="heart"></Icon>
               <span className="md:hidden">Favorites</span>
               <span
                 className="badge badge-sm badge-outline absolute -top-2 -right-2  rounded-full !border-neutral-content !border-opacity-50 !bg-neutral !bg-opacity-[var(--header-bg-opacity)] text-neutral-content group-hover:!bg-opacity-100 group-hover:text-neutral-content md:top-0"
@@ -179,7 +137,7 @@ const Header = ({ navItems, transparent }) => {
               >
                 0
               </span>
-            </button>
+            </Button>
           </div>
         </div>
       </nav>
@@ -278,23 +236,7 @@ const Hero = () => {
             </div>
             <button className="col-span-2 gap-2 uppercase btn btn-primary btn-block">
               Shop Now
-              <div className="text-lg icon h2">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth="0"
-                  viewBox="0 0 20 20"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
+              <Icon className="text-lg " id="arrow-right"></Icon>
             </button>
             <p className="col-span-2 text-xs hint-text font-body text-neutral-content text-opacity-70">
               We will never share your contact information and you can
@@ -311,21 +253,8 @@ const Hero = () => {
                 href="#dedicatedToExcellence"
                 className=" relative flex h-[80px] w-full items-center justify-center transition-all duration-300 ease-out group-hover:h-full "
               >
-                <div className="icon absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line x1={12} y1={5} x2={12} y2={19} />
-                    <polyline points="19 12 12 19 5 12" />
-                  </svg>
+                <div className="absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
+                  <Icon id="arrow-down"></Icon>
                 </div>
                 Dedicated to Excellence
               </a>
@@ -335,21 +264,8 @@ const Hero = () => {
                 href="#dedicatedToExcellence"
                 className=" relative flex h-[80px] w-full items-center justify-center transition-all duration-300 ease-out group-hover:h-full "
               >
-                <div className="icon absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line x1={12} y1={5} x2={12} y2={19} />
-                    <polyline points="19 12 12 19 5 12" />
-                  </svg>
+                <div className="absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
+                  <Icon id="arrow-down"></Icon>
                 </div>
                 Adventurers Wanted
               </a>
@@ -359,21 +275,8 @@ const Hero = () => {
                 href="#dedicatedToExcellence"
                 className=" relative flex h-[80px] w-full items-center justify-center transition-all duration-300 ease-out group-hover:h-full "
               >
-                <div className="icon absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line x1={12} y1={5} x2={12} y2={19} />
-                    <polyline points="19 12 12 19 5 12" />
-                  </svg>
+                <div className="absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
+                  <Icon id="arrow-down"></Icon>
                 </div>
                 Brands You Trust
               </a>
@@ -383,21 +286,8 @@ const Hero = () => {
                 href="#dedicatedToExcellence"
                 className=" relative flex h-[80px] w-full items-center justify-center transition-all duration-300 ease-out group-hover:h-full "
               >
-                <div className="icon absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line x1={12} y1={5} x2={12} y2={19} />
-                    <polyline points="19 12 12 19 5 12" />
-                  </svg>
+                <div className="absolute top-0 left-0 flex w-full origin-top scale-0 justify-center opacity-0 transition-all duration-300 ease-out group-hover:top-[15px] group-hover:scale-100 group-hover:opacity-100">
+                  <Icon id="arrow-down"></Icon>
                 </div>
                 A History of Connection
               </a>

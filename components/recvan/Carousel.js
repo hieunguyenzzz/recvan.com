@@ -15,8 +15,8 @@ function Carousel({ items }) {
                 src={src}
                 alt={caption}
               />
-              <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-colors duration-700 ease-in-out group text-neutral-content hover:bg-neutral hover:bg-opacity-70">
-                <h5 className="p-2 py-1 uppercase transition-colors duration-700 ease-in-out border border-transparent cursor-pointer bg-neutral bg-opacity-80 text-neutral-content group-hover:border-white group-hover:bg-transparent">
+              <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-colors duration-700 ease-in-out group hover:bg-neutral hover:bg-opacity-70">
+                <h5 className="p-2 py-1 uppercase transition-colors duration-700 ease-in-out border border-transparent cursor-pointer bg-neutral bg-opacity-80 group-hover:border-white group-hover:bg-transparent">
                   {title}
                 </h5>
               </div>

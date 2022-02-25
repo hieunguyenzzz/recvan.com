@@ -10,6 +10,7 @@ export default function Button({
   color,
   glass,
   loading,
+  className,
   children,
 }) {
   const btnProps = {
@@ -44,7 +45,8 @@ export default function Button({
       },
       active,
       glass,
-      loading
+      loading,
+      className
     ),
     role: 'button',
   }

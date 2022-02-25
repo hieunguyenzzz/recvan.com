@@ -71,7 +71,6 @@ export default function RecvanBlog() {
                 />
               </a>
             </figure>
-
             <div className="flex flex-col justify-between flex-1 pb-3 px-container-offset">
               <h4 className="p-3 font-bold text-center">
                 10 Ways For Van Lifers to Welcome Fall

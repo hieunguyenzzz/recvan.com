@@ -2,6 +2,7 @@ import Carousel from '@components/UI/Carousel'
 import Image from '@components/UI/Image'
 import classNames from 'classnames'
 import React from 'react'
+import Icon from './common/Icons'
 const imgs = [
   'https://lmrvimages.azureedge.net/wp158255/01-main.jpg',
   'https://lmrvimages.azureedge.net/wp158255/02-main.jpg',
@@ -31,7 +32,7 @@ export default function InventoryDetail() {
             }
             return (
               <div key={i} className={classNames(className)}>
-                <img
+                <Image
                   className="absolute inset-0 object-cover w-full h-full"
                   src={src}
                 />
@@ -43,19 +44,8 @@ export default function InventoryDetail() {
       <div className="flex-1 w-full py-3 space-y-4 2xl px-container-offset md:max-w-lg 2xl:w-1/2 2xl:max-w-none">
         <div>
           <button className="flex gap-2 py-2 text-sm font-semibold uppercase text-primary">
-            <div className="text-lg icon">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth={0}
-                viewBox="0 0 1024 1024"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M872 474H286.9l350.2-304c5.6-4.9 2.2-14-5.2-14h-88.5c-3.9 0-7.6 1.4-10.5 3.9L155 487.8a31.96 31.96 0 0 0 0 48.3L535.1 866c1.5 1.3 3.3 2 5.2 2h91.5c7.4 0 10.8-9.2 5.2-14L286.9 550H872c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z" />
-              </svg>
-            </div>
+            <Icon className="text-lg" id="arrow-left" />
+
             <span className="underline">Back to results</span>
           </button>
         </div>
@@ -68,20 +58,7 @@ export default function InventoryDetail() {
               Used
             </span>
             <a className="flex gap-1 text-xs text-primary">
-              <div className="icon h2">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth={0}
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
-                </svg>
-              </div>
+              <Icon className="" id="location"></Icon>
               Phoenix, AZ
             </a>
             <div className="flex-1" />
@@ -89,21 +66,7 @@ export default function InventoryDetail() {
               type="button"
               className="z-10 w-8 h-8 min-h-0 btn-outline btn btn-sm btn-circle"
             >
-              <div tabIndex={'-1'} className="icon h2">
-                <svg
-                  stroke="currentColor"
-                  fill="none"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                </svg>
-              </div>
+              <Icon tabIndex={'-1'} id="heart"></Icon>
             </button>
           </div>
           <div className="flex gap-2 mt-5">
@@ -199,44 +162,15 @@ export default function InventoryDetail() {
               - - -{' '}
             </li>
           </ul>
+
           <div className="flex gap-2 mt-7">
             <button className="flex items-center flex-1 underline btn btn-primary btn-link">
-              <div className="flex items-baseline">
-                <div className="inline-block mr-2 icon">
-                  <svg
-                    className="inline"
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth={0}
-                    viewBox="0 0 16 16"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z" />
-                  </svg>
-                </div>
-                View MSRP
-              </div>
+              <Icon id="file" className="mr-2 "></Icon>
+              View MSRP
             </button>
             <button className="flex items-center flex-1 underline btn btn-primary btn-link">
-              <div className="flex items-baseline">
-                <div className="inline-block mr-2 icon">
-                  <svg
-                    className="inline"
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth={0}
-                    viewBox="0 0 16 16"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z" />
-                  </svg>
-                </div>
-                View brochure
-              </div>
+              <Icon id="file" className="mr-2 "></Icon>
+              View brochure
             </button>
           </div>
           <div className="flex flex-col gap-2 mt-2">
@@ -371,45 +305,20 @@ export default function InventoryDetail() {
                 )}
                 buttonPrev={
                   <button
-                    className="absolute flex items-center justify-center h-10 text-xl leading-10 text-white -translate-y-1/2 rounded left-2 top-1/2 w-7 bg-neutral bg-opacity-80 disabled:opacity-0"
+                    className="absolute flex items-center justify-center h-10 leading-10 text-white -translate-y-1/2 rounded left-2 top-1/2 w-7 bg-neutral bg-opacity-80 disabled:opacity-0"
                     aria-label="Next"
                     type="button"
                   >
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      strokeWidth={2}
-                      viewBox="0 0 24 24"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <polyline points="15 18 9 12 15 6" />
-                    </svg>
+                    <Icon className={'text-xl'} id="left" />
                   </button>
                 }
                 buttonNext={
                   <button
-                    className="absolute flex items-center justify-center h-10 text-xl leading-10 text-white -translate-y-1/2 rounded right-2 top-1/2 w-7 bg-neutral bg-opacity-80 disabled:opacity-0"
+                    className="absolute flex items-center justify-center h-10 leading-10 text-white -translate-y-1/2 rounded right-2 top-1/2 w-7 bg-neutral bg-opacity-80 disabled:opacity-0"
                     aria-label="Next"
                     type="button"
                   >
-                    <svg
-                      className="rotate-180"
-                      stroke="currentColor"
-                      fill="none"
-                      strokeWidth={2}
-                      viewBox="0 0 24 24"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <polyline points="15 18 9 12 15 6" />
-                    </svg>
+                    <Icon className="text-xl rotate-180" id="left" />
                   </button>
                 }
               ></Carousel>

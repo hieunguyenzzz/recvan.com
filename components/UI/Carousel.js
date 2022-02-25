@@ -1,3 +1,4 @@
+import Icon from '@components/recvan/common/Icons'
 import classNames from 'classnames'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 const useSlider = ({ sliderWrapRef }) => {
@@ -34,50 +35,20 @@ function Carousel({
   items,
   buttonPrev = (
     <button
-      className="absolute left-0 flex items-center justify-center w-10 h-10 text-xl text-white -translate-y-1/2 rounded-full top-1/2 bg-neutral disabled:opacity-50"
+      className="absolute left-0 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full top-1/2 bg-neutral disabled:opacity-50"
       aria-label="Next"
       type="button"
     >
-      <svg
-        stroke="currentColor"
-        fill="none"
-        strokeWidth={0}
-        viewBox="0 0 24 24"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M10 19l-7-7m0 0l7-7m-7 7h18"
-        />
-      </svg>
+      <Icon id="arrow-left" className={'text-xl'} />
     </button>
   ),
   buttonNext = (
     <button
-      className="absolute right-0 flex items-center justify-center w-10 h-10 text-xl text-white rotate-180 -translate-y-1/2 rounded-full top-1/2 bg-neutral disabled:opacity-50"
+      className="absolute right-0 flex items-center justify-center w-10 h-10 text-white rotate-180 -translate-y-1/2 rounded-full top-1/2 bg-neutral disabled:opacity-50"
       aria-label="Next"
       type="button"
     >
-      <svg
-        stroke="currentColor"
-        fill="none"
-        strokeWidth={0}
-        viewBox="0 0 24 24"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M10 19l-7-7m0 0l7-7m-7 7h18"
-        />
-      </svg>
+      <Icon id="arrow-left" className={'text-xl'} />
     </button>
   ),
   itemClassName = 'relative w-full  sm:w-[calc((100%-1em)/2)] md:w-[calc((100%-2em)/3)] lg:w-[calc((100%-3em)/4)] xl:w-[calc((100%-4em)/5)] 2xl:w-[calc((100%-5em)/6)]',

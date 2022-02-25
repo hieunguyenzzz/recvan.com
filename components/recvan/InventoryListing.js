@@ -2,6 +2,7 @@ import Button from '@components/UI/Button'
 import Image from '@components/UI/Image'
 import classNames from 'classnames'
 import React, { useEffect, useRef } from 'react'
+import Icon from './common/Icons'
 import ImageLabel from './common/ImageLabel'
 const Filter = () => {
   const formRef = useRef()
@@ -28,19 +29,7 @@ const Filter = () => {
             htmlFor="openFilter"
             className="w-10 h-10 min-h-0 btn-outline btn btn-circle md:hidden"
           >
-            <div className="icon h2">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth={0}
-                viewBox="0 0 512 512"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M400 145.49L366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49z" />
-              </svg>
-            </div>
+            <Icon id="close"></Icon>
           </label>
         </div>
       </div>
@@ -172,21 +161,7 @@ const ProductCard = () => {
             type="button"
             className="absolute z-10 btn btn-ghost btn-sm btn-circle top-1 right-1 bg-base-200 bg-opacity-30 hover:bg-base-100"
           >
-            <div tabIndex={'-1'} className="icon h2">
-              <svg
-                stroke="currentColor"
-                fill="none"
-                strokeWidth={2}
-                viewBox="0 0 24 24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-              </svg>
-            </div>
+            <Icon id="heart" tabIndex={'-1'}></Icon>
           </button>
           <Image
             className="absolute inset-0 object-cover w-full h-full"
@@ -234,28 +209,17 @@ const FilterCollapse = ({ active, title, children, defaultOpen }) => {
       <input type="checkbox" defaultChecked={defaultOpen} />
       <div
         className={classNames(
-          'collapse-title flex items-baseline text-sm font-semibold uppercase leading-7 leading-none ',
+          'collapse-title flex items-start text-sm font-semibold uppercase leading-7',
           {
             'text-primary': active,
           }
         )}
       >
-        <div className="block icon ">
-          {active && (
-            <svg
-              className="inline mr-2"
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth={0}
-              viewBox="0 0 16 16"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-            </svg>
-          )}
-        </div>
+        {active && (
+          <div className="flex items-center h-6">
+            <Icon id="circle-checked" className="inline mr-2 text-xl"></Icon>
+          </div>
+        )}
         <div>{title}</div>
       </div>
       <div className="collapse-content">
@@ -283,18 +247,8 @@ export default function InventoryListing() {
       <div className="flex-1 py-6 space-y-4 px-container-offset">
         <div className="flex w-full gap-3 ">
           <label className="relative block w-full">
-            <div className="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-xl text-opacity-50 icon h2 text-base-content">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth={0}
-                viewBox="0 0 512 512"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M337.509 305.372h-17.501l-6.571-5.486c20.791-25.232 33.922-57.054 33.922-93.257C347.358 127.632 283.896 64 205.135 64 127.452 64 64 127.632 64 206.629s63.452 142.628 142.225 142.628c35.011 0 67.831-13.167 92.991-34.008l6.561 5.487v17.551L415.18 448 448 415.086 337.509 305.372zm-131.284 0c-54.702 0-98.463-43.887-98.463-98.743 0-54.858 43.761-98.742 98.463-98.742 54.7 0 98.462 43.884 98.462 98.742 0 54.856-43.762 98.743-98.462 98.743z" />
-              </svg>
+            <div className="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-opacity-50 icon h2 text-base-content">
+              <Icon id="search" className={'text-xl'} />
             </div>
             <input
               type="text"
@@ -306,29 +260,7 @@ export default function InventoryListing() {
             className="relative w-10 h-10 min-h-0 group-a btn-outline btn btn-circle md:hidden"
             htmlFor="openFilter"
           >
-            <div className="icon h2">
-              <svg
-                stroke="currentColor"
-                fill="none"
-                strokeWidth={2}
-                viewBox="0 0 24 24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line x1={4} y1={21} x2={4} y2={14} />
-                <line x1={4} y1={10} x2={4} y2={3} />
-                <line x1={12} y1={21} x2={12} y2={12} />
-                <line x1={12} y1={8} x2={12} y2={3} />
-                <line x1={20} y1={21} x2={20} y2={16} />
-                <line x1={20} y1={12} x2={20} y2={3} />
-                <line x1={1} y1={14} x2={7} y2={14} />
-                <line x1={9} y1={8} x2={15} y2={8} />
-                <line x1={17} y1={16} x2={23} y2={16} />
-              </svg>
-            </div>
+            <Icon id="filter" className="icon h2"></Icon>
             <span className="group-a-hover:border-base-content badge absolute -top-[20%] -right-[20%] rounded-full text-base-content empty:hidden">
               1
             </span>
