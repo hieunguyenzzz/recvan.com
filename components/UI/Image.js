@@ -2,20 +2,22 @@ import classNames from 'classnames'
 import NextImage from 'next/image'
 import React from 'react'
 const myLoader = ({ src, width, quality }) => {
-  return src
+  return 'https://image-proxy.ngohoanglongptit8635.workers.dev/' + src
 }
 export default function Image({
   className,
   size,
   ratio = 'auto',
   shape,
+  src,
   ...props
 }) {
   if (ratio === 'auto') {
     return (
       <NextImage
         className="absolute inset-0 object-cover w-full h-full"
-        loader={myLoader}
+        // loader={myLoader}
+        src={'https://image-proxy.ngohoanglongptit8635.workers.dev/' + src}
         layout="fill"
         {...props}
       />
@@ -32,8 +34,8 @@ export default function Image({
     >
       <NextImage
         className="absolute inset-0 object-cover w-full h-full"
-        loader={myLoader}
         layout="fill"
+        src={'https://image-proxy.ngohoanglongptit8635.workers.dev/' + src}
         {...props}
       />
     </div>
