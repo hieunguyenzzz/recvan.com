@@ -51,7 +51,7 @@ function Carousel({
       <Icon id="arrow-left" className={'text-xl'} />
     </button>
   ),
-  itemClassName = 'relative w-full  sm:w-[calc((100%-1em)/2)] md:w-[calc((100%-2em)/3)] lg:w-[calc((100%-3em)/4)] xl:w-[calc((100%-4em)/5)] 2xl:w-[calc((100%-5em)/6)]',
+  itemClassName = 'relative w-full  sm:w-[calc((100%-1em)/2)] md:w-[calc((100%-2em)/3)] lg:w-[calc((100%-3em)/4)] xl:w-[calc((100%-4em)/5)] 2xl:w-[calc((100%-5em)/6)] ',
 }) {
   const sliderWrapRef = useRef()
   const { handleNext, handlePrev, prevAble, nextAble } = useSlider({

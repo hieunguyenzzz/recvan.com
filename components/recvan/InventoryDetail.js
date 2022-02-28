@@ -198,7 +198,7 @@ export default function InventoryDetail() {
             <div tabIndex={0} className="collapse collapse-arrow bg-base-200 ">
               <input type="checkbox" />
               <div className="text-sm font-medium leading-7 collapse-title">
-                FLOORPAN
+                DESCRIPTION
               </div>
               <div className="collapse-content">
                 <div

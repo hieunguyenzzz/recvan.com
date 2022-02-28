@@ -15,6 +15,7 @@ export default function SocialInstagram({ items }) {
           <div className="relative col-start-2 col-end-5 row-start-1 row-end-3">
             <Image
               ratio={1}
+              className={'min-h-full'}
               src="https://recvan.com/content/images/instagram-c.jpg"
             />
           </div>

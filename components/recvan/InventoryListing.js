@@ -302,7 +302,7 @@ export default function InventoryListing() {
             </select>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {new Array(24).fill(<ProductCard />)}
           <div className="flex justify-center col-span-full">
             <button className="btn-outline btn">show more results</button>
