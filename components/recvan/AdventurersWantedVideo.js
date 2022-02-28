@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 export default function AdventurersWantedVideo() {
   const trackerRef = useRef()
+  const [showVideo, setShowVideo] = useState()
   const [percent, setPercent] = useState(0)
   useEffect(() => {
     let lastKnownScrollPosition = 0
@@ -31,6 +32,11 @@ export default function AdventurersWantedVideo() {
       window.removeEventListener('scroll', windowScrollHandler)
     }
   }, [])
+  useEffect(() => {
+    if (percent > 0) {
+      setShowVideo(true)
+    }
+  }, [showVideo || percent > 0])
   return (
     <div ref={trackerRef} className="w-full ">
       <div className="sticky top-header isolate flex h-screen w-full items-center bg-[#585731]">
@@ -52,14 +58,16 @@ export default function AdventurersWantedVideo() {
           }}
           className="relative top-0 right-0 w-full transition-all will-change-scroll"
         >
-          <iframe
-            loading="lazy"
-            className="absolute w-full h-full pointer-events-none"
-            src="https://www.youtube.com/embed/6JESEQk7Pzw?&autoplay=1&mute=1&modestbranding=1&rel=0&loop=1&playlist=6JESEQk7Pzw"
-            frameBorder={0}
-            allow="autoplay"
-            allowFullScreen
-          />
+          {showVideo && (
+            <iframe
+              loading="lazy"
+              className="absolute w-full h-full pointer-events-none"
+              src="https://www.youtube.com/embed/6JESEQk7Pzw?&autoplay=1&mute=1&modestbranding=1&rel=0&loop=1&playlist=6JESEQk7Pzw"
+              frameBorder={0}
+              allow="autoplay"
+              allowFullScreen
+            />
+          )}
         </div>
       </div>
       <div style={{ paddingBottom: '56.25%' }}></div>
