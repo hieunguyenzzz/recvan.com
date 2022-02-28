@@ -14,7 +14,7 @@ export default function Image({
     return (
       <NextImage
         className="absolute inset-0 object-cover w-full h-full"
-        src={src}
+        src={'https://image-proxy.ngohoanglongptit8635.workers.dev/' + src}
         layout="fill"
         {...props}
       />
@@ -32,7 +32,7 @@ export default function Image({
       <NextImage
         className="absolute inset-0 object-cover w-full h-full"
         layout="fill"
-        src={src}
+        src={'https://image-proxy.ngohoanglongptit8635.workers.dev/' + src}
         {...props}
       />
     </div>
