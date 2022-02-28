@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['image-proxy.ngohoanglongptit8635.workers.dev'],
+    domains: ['image-proxy.ngohoanglongptit8635.workers.dev', 'recvan.com'],
   },
 }
