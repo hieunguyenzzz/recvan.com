@@ -18,6 +18,16 @@ const imgs = [
   'https://lmrvimages.azureedge.net/wp158255/11-main.jpg',
   'https://lmrvimages.azureedge.net/wp158255/12-main.jpg',
 ]
+const InfoItem = ({ title, content }) => {
+  return (
+    <li className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
+      <div className="block text-sm text-opacity-50 uppercase text-primary">
+        <label>{title}</label>
+      </div>
+      {content}
+    </li>
+  )
+}
 export default function InventoryDetail() {
   return (
     <div className="flex flex-col-reverse items-start w-full md:flex-row">
@@ -73,24 +83,31 @@ export default function InventoryDetail() {
               <Icon tabIndex={'-1'} id="heart"></Icon>
             </Button>
           </div>
-          <div className="flex gap-2 mt-5">
-            <div className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
+          <ul className="flex gap-2 mt-5">
+            <InfoItem
+              title={'List Price'}
+              content={
+                <h4 className="text-2xl line-through font-number text-base-content text-opacity-70">
+                  $172,998
+                </h4>
+              }
+            >
               <label className="text-sm text-opacity-50 uppercase text-primary">
                 List Price
               </label>
               <h4 className="text-2xl line-through font-number text-base-content text-opacity-70">
                 $172,998
               </h4>
-            </div>
-            <div className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
-              <label className="text-sm text-opacity-50 uppercase text-primary">
-                Sale Price
-              </label>
-              <h4 className="text-2xl font-number text-base-content ">
-                $144,998
-              </h4>
-            </div>
-          </div>
+            </InfoItem>
+            <InfoItem
+              title={'Sale Price'}
+              content={
+                <h4 className="text-2xl font-number text-base-content ">
+                  $144,998
+                </h4>
+              }
+            ></InfoItem>
+          </ul>
           <div className="flex w-full mt-7">
             <div className="flex flex-col items-center flex-1 gap-2 text-center">
               <div className="relative aspect-square w-[4.75rem] rounded-full  bg-base-300 bg-opacity-80 sm:w-[5.625rem] md:w-[4.75rem] xl:w-[5.625rem]">
@@ -120,51 +137,14 @@ export default function InventoryDetail() {
               <div className="text-xs md:text-sm">Diesel</div>
             </div>
           </div>
-          <div className="flex gap-2 mt-7">
-            <div className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
-              <label className="block text-sm text-opacity-50 uppercase text-primary">
-                Stock
-              </label>
-              $172,998
-            </div>
-          </div>
+
           <ul className="grid grid-cols-2 gap-2 mt-7 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3">
-            <li className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
-              <div className="block text-sm text-opacity-50 uppercase text-primary">
-                <label>Stock #</label>
-              </div>
-              WP158255
-            </li>
-            <li className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
-              <div className="block text-sm text-opacity-50 uppercase text-primary">
-                <label>Make</label>
-              </div>
-              Winnebago
-            </li>
-            <li className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
-              <div className="block text-sm text-opacity-50 uppercase text-primary">
-                <label>Last 6 VIN</label>
-              </div>
-              009010
-            </li>
-            <li className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
-              <div className="block text-sm text-opacity-50 uppercase text-primary">
-                <label>Engine</label>
-              </div>
-              D/ 188HP MERCEDES
-            </li>
-            <li className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
-              <div className="block text-sm text-opacity-50 uppercase text-primary">
-                <label>Exterior</label>
-              </div>
-              - - -
-            </li>
-            <li className="flex-1 px-4 py-2 bg-base-300 bg-opacity-20">
-              <div className="block text-sm text-opacity-50 uppercase text-primary">
-                <label>Interior</label>
-              </div>
-              - - -{' '}
-            </li>
+            <InfoItem title={'Stock #'} content={'WP158255'}></InfoItem>
+            <InfoItem title={'Make'} content={'Winnebago'}></InfoItem>
+            <InfoItem title={'Last 6 VIN'} content={'009010'}></InfoItem>
+            <InfoItem title={'Engine'} content={'D/ 188HP MERCEDES'}></InfoItem>
+            <InfoItem title={'Exterior'} content={'- - -'}></InfoItem>
+            <InfoItem title={'Interior'} content={'- - -'}></InfoItem>
           </ul>
 
           <div className="flex gap-2 mt-7">
