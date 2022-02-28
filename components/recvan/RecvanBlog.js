@@ -13,6 +13,7 @@ export default function RecvanBlog() {
             <figure className="h-[220px] w-full">
               <iframe
                 className="w-full h-full"
+                loading="lazy"
                 src="https://www.youtube.com/embed/L4EE50wv7Zs?rel=0"
               />
             </figure>
@@ -40,6 +41,7 @@ export default function RecvanBlog() {
             <figure className="h-[220px] w-full">
               <iframe
                 className="w-full h-full"
+                loading="lazy"
                 src="https://www.youtube.com/embed/0KF6c-ZSy6w>keto?rel=0"
               />
             </figure>
