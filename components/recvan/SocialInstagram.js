@@ -13,7 +13,10 @@ export default function SocialInstagram({ items }) {
             <Image src="https://recvan.com/content/images/instagram-b.jpg" />
           </div>
           <div className="relative col-start-2 col-end-5 row-start-1 row-end-3">
-            <Image src="https://recvan.com/content/images/instagram-c.jpg" />
+            <Image
+              ratio={1}
+              src="https://recvan.com/content/images/instagram-c.jpg"
+            />
           </div>
         </div>
         <div className="flex items-center self-center w-full md:flex-1">
