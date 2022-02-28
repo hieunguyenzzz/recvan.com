@@ -53,6 +53,7 @@ export default function AdventurersWantedVideo() {
           className="relative top-0 right-0 w-full transition-all will-change-scroll"
         >
           <iframe
+            loading="lazy"
             className="absolute w-full h-full pointer-events-none"
             src="https://www.youtube.com/embed/6JESEQk7Pzw?&autoplay=1&mute=1&modestbranding=1&rel=0&loop=1&playlist=6JESEQk7Pzw"
             frameBorder={0}
