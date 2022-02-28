@@ -157,12 +157,15 @@ const ProductCard = () => {
       <div className="flex w-full md:flex-col">
         <div className="relative aspect-square  w-1/3 min-w-[146px] md:w-full md:max-w-full">
           <ImageLabel>Used</ImageLabel>
-          <button
+          <Button
+            variant={'ghost'}
+            size="sm"
+            shape={'circle'}
             type="button"
-            className="absolute z-10 btn btn-ghost btn-sm btn-circle top-1 right-1 bg-base-200 bg-opacity-30 hover:bg-base-100"
+            className="absolute z-10 top-1 right-1 bg-base-200 bg-opacity-30 hover:bg-base-100"
           >
-            <Icon id="heart" tabIndex={'-1'}></Icon>
-          </button>
+            <Icon id="heart"></Icon>
+          </Button>
           <Image
             className="absolute inset-0 object-cover w-full h-full"
             src="https://lmrvimages.azureedge.net/lt164447/01-main.jpg"
@@ -188,12 +191,26 @@ const ProductCard = () => {
         </div>
       </div>
       <div className="flex flex-col justify-end flex-1 gap-2 p-2 border-t">
-        <a className="underline capitalize btn btn-link btn-sm" role="button">
-          Check Availability Now
-        </a>
+        <Button
+          className="underline capitalize "
+          variant={'link'}
+          size="sm"
+          shape="block"
+        >
+          {(props) => (
+            <a href="#" {...props}>
+              Check Availability Now
+            </a>
+          )}
+        </Button>
+
         <div className="">
           <Button variant={'outline'} size="sm" shape="block">
-            {(btnProps) => <a {...btnProps}>Email Me Info</a>}
+            {(btnProps) => (
+              <a href="#" {...btnProps}>
+                Email Me Info
+              </a>
+            )}
           </Button>
         </div>
         <Button color={'primary'} variant={'outline'} size="sm" shape="block">
@@ -210,10 +227,10 @@ const ProductCard = () => {
 const FilterCollapse = ({ active, title, children, defaultOpen }) => {
   return (
     <div tabindex="0" className="collapse collapse-arrow">
-      <input type="checkbox" defaultChecked={defaultOpen} />
+      <input className="peer" type="checkbox" defaultChecked={defaultOpen} />
       <div
         className={classNames(
-          'collapse-title flex items-start text-sm font-semibold uppercase leading-7',
+          'peer-checked:focusable collapse-title flex items-start text-sm font-semibold uppercase leading-7',
           {
             'text-primary': active,
           }

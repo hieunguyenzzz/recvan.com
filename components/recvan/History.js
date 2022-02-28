@@ -52,7 +52,7 @@ export default function History({ items }) {
             <p className="mt-4">
               <Button className="w-full md:w-auto" color="secondary">
                 {(props) => (
-                  <a {...props} href="RecVanSearch">
+                  <a {...props} href="#">
                     Learn more
                   </a>
                 )}

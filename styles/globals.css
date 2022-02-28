@@ -190,7 +190,20 @@
     @apply bg-base-100 font-body text-base-content;
   }
 }
-
+@layer utilities {
+  .focusable:focus {
+    border-color: hsla(var(--nc) / 1);
+    box-shadow: 0 0 0 2px hsl(var(--nc) / 0.2), 0 0 0 4px hsla(var(--nc) / 0.2);
+  }
+  .focusable:focus:active {
+    border-color: hsla(var(--nc) / 1);
+    box-shadow: 0 0 0 2px hsl(var(--nc) / 0.2);
+  }
+  .fit {
+    min-height: 100vh;
+    min-height: calc(100vh - var(--header-height));
+  }
+}
 @layer components {
   .input {
     height: 2.5rem;
@@ -205,14 +218,7 @@
     border-color: hsla(var(--nc) / 0.5);
     border-width: 1px;
   }
-  .focusable:focus {
-    border-color: hsla(var(--nc) / 1);
-    box-shadow: 0 0 0 2px hsl(var(--nc) / 0.2), 0 0 0 4px hsla(var(--nc) / 0.2);
-  }
-  .focusable:focus:active {
-    border-color: hsla(var(--nc) / 1);
-    box-shadow: 0 0 0 1px hsl(var(--nc) / 0.6);
-  }
+
   .input:focus,
   .textarea:focus,
   .select:focus {
