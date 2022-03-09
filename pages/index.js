@@ -23,7 +23,6 @@ export default function Pages({  ...props }) {
 }
 
 export async function getStaticProps(context) {
-  const slug = context.params.slug
   return {
     props: {
      
