@@ -1,4 +1,4 @@
-import { templateRoutes } from '@utils/componentRoutes'
+import { templateRoutes } from '../utils/componentRoutes'
 
 export default function Pages({  ...props }) {
   const componentRoutes = templateRoutes.find(([key]) => key === 'homepage' )[1]
