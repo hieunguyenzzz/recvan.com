@@ -186,75 +186,65 @@ export default function InventoryDetail() {
           </div>
           <div className="mt-7 divide-y divide-base-content divide-opacity-40 border-t border-b border-base-content border-opacity-40">
             <Collapse title={'FLOORPAN'}>
-              <img src="https://lmrvimages.azureedge.net/wp163572/14-main.jpg" />
+              <div className="prose px-3 pt-2">
+                <img src="https://lmrvimages.azureedge.net/wp163572/14-main.jpg" />
+              </div>
             </Collapse>
-            <div tabIndex={0} className="collapse collapse-arrow bg-base-200 ">
-              <input type="checkbox" />
-              <div className="collapse-title text-sm font-medium leading-7">
-                DESCRIPTION
+            <Collapse title="DESCRIPTION">
+              <div
+                style={{
+                  '--tw-prose-bullets': 'hsla(var(--tw-base-content))',
+                }}
+                className="prose px-3 pt-2"
+              >
+                <p>
+                  The Winnebago Boldt is an energy and fuel-efficient Class B
+                  mini-motorhome equipped with a perfect blend of comfort and
+                  innovation. Built on the Mercedes-Benz Sprinter chassis with a
+                  3.0L 6-cylinder, 188HP turbo-diesel engine, the Boldt is an
+                  all-season-ready camper van that makes all-weather camping a
+                  comfortable possibility. Equipped with the lithium-based Pure
+                  3 Advanced Energy System, you can now enjoy 12,800 watt-hours
+                  of clean and quiet power.{' '}
+                </p>
+                <p>
+                  <strong>Features May Include:</strong>
+                </p>
+                <ul>
+                  <li>Active lane-keeping, brake, and blind-spot assist</li>
+                  <li>Extensive 4-season insulation</li>
+                  <li>
+                    MBUX touchscreen infotainment multimedia system with AI
+                    voice interface
+                  </li>
+                  <li>Keyless entry w/remote</li>
+                  <li>Rain sensor with integrated wet wiper system</li>
+                  <li>LED ceiling lights</li>
+                  <li>RAM Tough-Track mounts</li>
+                  <li>JBL Soundbar</li>
+                  <li>FLEX deluxe sleep system</li>
+                  <li>Microwave/convection oven w/touch control</li>
+                </ul>
+                <p />
+                <p>
+                  <strong>Optional Features May Include</strong>
+                </p>
+                <p />
+                <ul>
+                  <li>Optional 4WD chassis</li>
+                  <li>Dual-pane, Euro acrylic windows w/cassette shades</li>
+                  <li>Stylized aluminum wheels</li>
+                  <li>Luggage rack</li>
+                  <li>Movable ladder</li>
+                </ul>
+                <p />
               </div>
-              <div className="collapse-content">
-                <div
-                  style={{
-                    '--tw-prose-bullets': 'hsla(var(--tw-base-content))',
-                  }}
-                  className="prose px-3 pt-2"
-                >
-                  <p>
-                    The Winnebago Boldt is an energy and fuel-efficient Class B
-                    mini-motorhome equipped with a perfect blend of comfort and
-                    innovation. Built on the Mercedes-Benz Sprinter chassis with
-                    a 3.0L 6-cylinder, 188HP turbo-diesel engine, the Boldt is
-                    an all-season-ready camper van that makes all-weather
-                    camping a comfortable possibility. Equipped with the
-                    lithium-based Pure 3 Advanced Energy System, you can now
-                    enjoy 12,800 watt-hours of clean and quiet power.{' '}
-                  </p>
-                  <p>
-                    <strong>Features May Include:</strong>
-                  </p>
-                  <ul>
-                    <li>Active lane-keeping, brake, and blind-spot assist</li>
-                    <li>Extensive 4-season insulation</li>
-                    <li>
-                      MBUX touchscreen infotainment multimedia system with AI
-                      voice interface
-                    </li>
-                    <li>Keyless entry w/remote</li>
-                    <li>Rain sensor with integrated wet wiper system</li>
-                    <li>LED ceiling lights</li>
-                    <li>RAM Tough-Track mounts</li>
-                    <li>JBL Soundbar</li>
-                    <li>FLEX deluxe sleep system</li>
-                    <li>Microwave/convection oven w/touch control</li>
-                  </ul>
-                  <p />
-                  <p>
-                    <strong>Optional Features May Include</strong>
-                  </p>
-                  <p />
-                  <ul>
-                    <li>Optional 4WD chassis</li>
-                    <li>Dual-pane, Euro acrylic windows w/cassette shades</li>
-                    <li>Stylized aluminum wheels</li>
-                    <li>Luggage rack</li>
-                    <li>Movable ladder</li>
-                  </ul>
-                  <p />
-                </div>
+            </Collapse>
+            <Collapse title={'Included Features'}>
+              <div className="px-3 pt-2">
+                <p class="mb-0">Twin Beds</p>
               </div>
-            </div>
-            <div tabIndex={0} className="collapse collapse-arrow bg-base-200 ">
-              <input type="checkbox" />
-              <div className="collapse-title text-sm font-medium uppercase leading-7">
-                Included Features
-              </div>
-              <div className="collapse-content">
-                <div className="px-3 pt-2">
-                  <p class="mb-0">Twin Beds</p>
-                </div>
-              </div>
-            </div>
+            </Collapse>
           </div>
           <div className="mt-7 w-full">
             <div className="bg-[#9DACBC] px-5 py-3 text-xl text-white">
