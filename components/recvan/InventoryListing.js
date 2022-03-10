@@ -22,12 +22,12 @@ const Filter = () => {
       ref={formRef}
       className="divide-y divide-base-content divide-opacity-50 will-change-scroll"
     >
-      <div className="sticky top-0 z-10 shadow-sm bg-base-100">
-        <div className="flex items-center justify-between p-4 font-semibold text-black uppercase ">
+      <div className="sticky top-0 z-10 bg-base-100 shadow-sm">
+        <div className="flex items-center justify-between p-4 font-semibold uppercase text-black ">
           Filter (0){' '}
           <label
             htmlFor="openFilter"
-            className="w-10 h-10 min-h-0 btn-outline btn btn-circle md:hidden"
+            className="btn-outline btn btn-circle h-10 min-h-0 w-10 md:hidden"
           >
             <Icon id="close"></Icon>
           </label>
@@ -40,14 +40,14 @@ const Filter = () => {
               name="inventory-type"
               value="new"
               type="checkbox"
-              className="border-opacity-50 rounded peer checkbox checkbox-xs checked:checkbox-primary"
+              className="peer checkbox checkbox-xs rounded border-opacity-50 checked:checkbox-primary"
             />
             <span className="peer-checked:text-primary">New</span>
           </label>
           <label className="flex items-start gap-2 leading-5">
             <input
               type="checkbox"
-              className="border-opacity-50 rounded peer checkbox checkbox-xs checked:checkbox-primary"
+              className="peer checkbox checkbox-xs rounded border-opacity-50 checked:checkbox-primary"
             />
             <span className="peer-checked:text-primary">Used</span>
           </label>
@@ -55,7 +55,7 @@ const Filter = () => {
       </FilterCollapse>
       <FilterCollapse title={'Make & Model'}>
         <label className="relative w-full ">
-          <div className="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-xl text-opacity-50 icon h2 text-base-content">
+          <div className="icon h2 absolute top-0 left-0 flex h-10 w-10 items-center justify-center text-xl text-base-content text-opacity-50">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -72,7 +72,7 @@ const Filter = () => {
           <input
             type="text"
             placeholder="Search Makes or Models"
-            className="inline-block w-full pl-10 bg-white rounded input-bordered input input-md"
+            className="input-bordered input input-md inline-block w-full rounded bg-white pl-10"
           />
         </label>
       </FilterCollapse>
@@ -80,14 +80,14 @@ const Filter = () => {
         <label className="flex items-start gap-2 leading-5">
           <input
             type="checkbox"
-            className="border-opacity-50 rounded peer checkbox checkbox-xs checked:checkbox-primary"
+            className="peer checkbox checkbox-xs rounded border-opacity-50 checked:checkbox-primary"
           />
           <span className="peer-checked:text-primary">Gas</span>
         </label>
         <label className="flex items-start gap-2 leading-5">
           <input
             type="checkbox"
-            className="border-opacity-50 rounded peer checkbox checkbox-xs checked:checkbox-primary"
+            className="peer checkbox checkbox-xs rounded border-opacity-50 checked:checkbox-primary"
           />
           <span className="peer-checked:text-primary">Diesel</span>
         </label>
@@ -97,28 +97,28 @@ const Filter = () => {
           <div className="relative min-w-full py-1">
             <div className="h-1 rounded-full bg-base-content bg-opacity-20">
               <div
-                className="absolute w-0 h-1 rounded-full bg-primary"
+                className="absolute h-1 w-0 rounded-full bg-primary"
                 style={{ width: '24.1935%', left: '11.2903%' }}
               />
               <div
                 tabIndex={'-1'}
-                className="absolute flex items-center justify-center w-5 h-5 -ml-2 -translate-y-1/2 bg-white border border-gray-300 rounded-full shadow cursor-pointer focusable top-1/2"
+                className="focusable absolute top-1/2 -ml-2 flex h-5 w-5 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-white shadow"
                 unselectable="on"
                 style={{ left: '11.2903%' }}
               >
-                <div className="relative w-1 -mt-2"></div>
+                <div className="relative -mt-2 w-1"></div>
               </div>
               <div
                 tabIndex={'-1'}
-                className="absolute flex items-center justify-center w-5 h-5 -ml-2 -translate-y-1/2 bg-white border border-gray-300 rounded-full shadow cursor-pointer focusable top-1/2"
+                className="focusable absolute top-1/2 -ml-2 flex h-5 w-5 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-white shadow"
                 unselectable="on"
                 style={{ left: '35.4839%' }}
               >
-                <div className="relative w-1 -mt-2"></div>
+                <div className="relative -mt-2 w-1"></div>
               </div>
             </div>
           </div>
-          <div className="flex justify-between mt-2 text-xs">
+          <div className="mt-2 flex justify-between text-xs">
             <div className="flex-1">$60000</div>
             <div>to</div>
             <div className="flex-1 text-right">$38000</div>
@@ -141,7 +141,7 @@ const Filter = () => {
             <label key={i} className="flex items-start gap-2 leading-5">
               <input
                 type="checkbox"
-                className="border-opacity-50 rounded peer checkbox checkbox-xs checked:checkbox-primary"
+                className="peer checkbox checkbox-xs rounded border-opacity-50 checked:checkbox-primary"
               />
               <span className="peer-checked:text-primary">{label}</span>
             </label>
@@ -162,17 +162,17 @@ const ProductCard = () => {
             size="sm"
             shape={'circle'}
             type="button"
-            className="absolute z-10 top-1 right-1 bg-base-200 bg-opacity-30 hover:bg-base-100"
+            className="absolute top-1 right-1 z-10 bg-base-200 bg-opacity-30 hover:bg-base-100"
           >
             <Icon id="heart"></Icon>
           </Button>
           <Image
-            className="absolute inset-0 object-cover w-full h-full"
+            className="absolute inset-0 h-full w-full object-cover"
             src="https://lmrvimages.azureedge.net/lt164447/01-main.jpg"
           />
         </div>
         <div className="p-3 md:text-center">
-          <div className="leading-snug uppercase text-primary hover:underline md:text-xl">
+          <div className="uppercase leading-snug text-primary hover:underline md:text-xl">
             <h6>2019 Winnebago</h6>
             <h6>OUTLOOK 27D</h6>
           </div>
@@ -190,9 +190,9 @@ const ProductCard = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col justify-end flex-1 gap-2 p-2 border-t">
+      <div className="flex flex-1 flex-col justify-end gap-2 border-t p-2">
         <Button
-          className="underline capitalize "
+          className="capitalize underline "
           variant={'link'}
           size="sm"
           shape="block"
@@ -226,7 +226,7 @@ const ProductCard = () => {
 }
 const FilterCollapse = ({ active, title, children, defaultOpen }) => {
   return (
-    <div tabindex="0" className="collapse collapse-arrow">
+    <div className="collapse collapse-arrow">
       <input className="peer" type="checkbox" defaultChecked={defaultOpen} />
       <div
         className={classNames(
@@ -237,8 +237,8 @@ const FilterCollapse = ({ active, title, children, defaultOpen }) => {
         )}
       >
         {active && (
-          <div className="flex items-center h-6">
-            <Icon id="circle-checked" className="inline mr-2 text-xl"></Icon>
+          <div className="flex h-6 items-center">
+            <Icon id="circle-checked" className="mr-2 inline text-xl"></Icon>
           </div>
         )}
         <div>{title}</div>
@@ -251,11 +251,11 @@ const FilterCollapse = ({ active, title, children, defaultOpen }) => {
 }
 export default function InventoryListing() {
   return (
-    <div className="flex items-start w-full ">
+    <div className="flex w-full items-start ">
       <input id="openFilter" className="peer" hidden type="checkbox" />
       <aside className="fixed top-header z-20  hidden h-[calc(100vh-var(--header-height))] min-h-[calc(100vh-var(--header-height))] w-full flex-col overflow-auto border-r border-base-content border-opacity-50 bg-base-200 peer-checked:flex md:sticky md:block md:max-w-[265px]">
         <Filter />
-        <div className="flex-1 border-b border-opacity-50 border-base-content" />
+        <div className="flex-1 border-b border-base-content border-opacity-50" />
         <div className="sticky bottom-0 bg-base-100  p-3 pb-[var(--bottom-offset)] shadow md:hidden">
           <label
             htmlFor="openFilter"
@@ -265,20 +265,20 @@ export default function InventoryListing() {
           </label>
         </div>
       </aside>
-      <div className="flex-1 py-6 space-y-4 px-container-offset">
+      <div className="flex-1 space-y-4 py-6 px-container-offset">
         <div className="flex w-full gap-3 ">
           <label className="relative block w-full">
-            <div className="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-opacity-50 icon h2 text-base-content">
+            <div className="icon h2 absolute top-0 left-0 flex h-10 w-10 items-center justify-center text-base-content text-opacity-50">
               <Icon id="search" className={'text-xl'} />
             </div>
             <input
               type="text"
               placeholder="Quick search vans..."
-              className="inline-block w-full pl-10 bg-white rounded input-bordered input input-md"
+              className="input-bordered input input-md inline-block w-full rounded bg-white pl-10"
             />
           </label>
           <label
-            className="relative w-10 h-10 min-h-0 group-a btn-outline btn btn-circle md:hidden"
+            className="group-a btn-outline btn btn-circle relative h-10 min-h-0 w-10 md:hidden"
             htmlFor="openFilter"
           >
             <Icon id="filter" className="icon h2"></Icon>
@@ -294,7 +294,7 @@ export default function InventoryListing() {
             <span className="text-xs uppercase text-base-content text-opacity-60">
               SORT BY:{' '}
             </span>
-            <select className="text-base border-none select select-sm">
+            <select className="select select-sm border-none text-base">
               <option>Choose...</option>
               <option>Most recent</option>
               <option>Price hight to low</option>
@@ -304,7 +304,7 @@ export default function InventoryListing() {
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {new Array(24).fill(<ProductCard />)}
-          <div className="flex justify-center col-span-full">
+          <div className="col-span-full flex justify-center">
             <button className="btn-outline btn">show more results</button>
           </div>
         </div>
