@@ -1,6 +1,6 @@
 import { templateRoutes } from '../utils/componentRoutes'
 
-export default function Pages({  ...props }) {
+export default function Pages({ }) {
   const componentRoutes = templateRoutes.find(([key]) => key === 'homepage' )[1]
   return (
     <>
@@ -23,7 +23,6 @@ export default function Pages({  ...props }) {
 }
 
 export async function getStaticProps(context) {
-  const slug = context.params.slug
   return {
     props: {
      
