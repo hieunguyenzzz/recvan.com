@@ -169,11 +169,11 @@ export default function InventoryDetail() {
           </ul>
 
           <div className="mt-7 flex gap-2">
-            <button className="btn btn-primary btn-link flex flex-1 items-center underline">
+            <button className="btn btn-primary btn-link flex flex-1 !flex-nowrap items-center underline">
               <Icon id="file" className="mr-2 "></Icon>
               View MSRP
             </button>
-            <button className="btn btn-primary btn-link flex flex-1 items-center underline">
+            <button className="btn btn-primary btn-link flex flex-1 !flex-nowrap items-center underline">
               <Icon id="file" className="mr-2 "></Icon>
               View brochure
             </button>
@@ -240,7 +240,7 @@ export default function InventoryDetail() {
                 <p />
               </div>
             </Collapse>
-            <Collapse title={'Included Features'}>
+            <Collapse title={'INCLUDED FEATURES'}>
               <div className="px-3 pt-2">
                 <p class="mb-0">Twin Beds</p>
               </div>
